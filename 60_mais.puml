@@ -1,0 +1,62 @@
+@startuml  
+
+!define C4PUML https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/v2.2.0/C4_Container.puml
+
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/v2.2.0/C4_Component.puml
+
+title Elementos do aplicativo Android "app_60_mais"
+
+Person(user, "Usuário")
+Person(Adm, "Criador de conteúdo informativo")
+
+Container(android, "Android App", "Aplicativo Android", "Android") {
+    Component(home_screen, "Tela Home", "Tela inicial do aplicativo", "Java") {
+        Component(ui_home, "Interface do usuário", "Componente de interface do usuário", "XML")
+        Component(controller_home, "Controlador", "Controlador da tela Home", "Java")
+    }
+    Component(login_screen, "Tela de Login", "Tela de login do aplicativo", "Java") {
+        Component(ui_login, "Interface do usuário", "Componente de interface do usuário", "XML")
+        Component(controller_login, "Controlador", "Controlador da tela de Login", "Java")
+    }
+    Component(signup_screen, "Tela de Cadastro", "Tela de cadastro do aplicativo", "Java") {
+        Component(ui_signup, "Interface do usuário", "Componente de interface do usuário", "XML")
+        Component(controller_signup, "Controlador", "Controlador da tela de Cadastro", "Java")
+    }
+}
+
+Container(Web,"WEB", "Serviços fornecidos pela internet", "APIs, Sites, etc..."){
+    Component(firebase, "Firebase", "Plataforma de desenvolvimento de aplicativos móveis e da web", "") {
+        Component(auth, "Firebase Authentication", "Serviço de autenticação de usuários", "Firebase Authentication") {
+            Component(authui, "UI para Firebase Authentication", "Interface de usuário para Firebase Authentication", "Firebase Authentication UI")
+        }
+        Component(cloud_firestore, "Firestore", "Serviço de armazenamento de dados", "Firebase Realtime Database")
+    }
+    Component(api, "API externa", "API para obter dados externos", "API RESTful") {
+        Component(service_api, "Serviço", "Serviço para acessar dados da API", "Java")
+    }
+    Component(coleta, "Pesquisa e coleta de dados", "tarefa manual", "Dados confiáveis em artigos, livros, posts, etc..."){
+        Component(post, "Postagem de dados", "Envio para app", "criar código font da publicação")
+    }
+}
+
+Rel(user, login_screen, "Interage com", "touch")
+Rel(user, signup_screen, "Interage com", "touch")
+Rel(user, home_screen, "Interage com", "touch")
+
+Rel(ui_home, controller_home, "Interage com", "touch")
+
+Rel(ui_login, controller_login, "Interage com", "touch")
+
+Rel(ui_signup, controller_signup, "Interage com", "touch")
+
+Rel(Adm, coleta, "Pesquisa", "web")
+Rel(post, home_screen, "Envia", "post")
+
+Rel(login_screen, firebase, "sigin", "http")
+Rel(signup_screen, firebase, "create", "http")
+Rel(firebase, home_screen, "get", "http")
+
+Rel(api, home_screen, "Post", "http")
+Rel(home_screen, api, "get", "http")
+
+@enduml
