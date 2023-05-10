@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/funatiTitle"
+            android:textSize="30sp"
+            android:layout_margin="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/funatiMain"
+            android:textSize="20sp"
+            android:layout_margin="@dimen/text_margin"/>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:contentDescription="idosos na funati"-->
+<!--            android:src="@drawable/atividades_funati" />-->
+
+        <Button
+            android:id="@+id/btnWebFunati"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:insetLeft="8dp"
+            android:insetRight="8dp"
+            android:textSize="30sp"
+            android:text="website funati" />
+
+    </LinearLayout>
+</ScrollView>

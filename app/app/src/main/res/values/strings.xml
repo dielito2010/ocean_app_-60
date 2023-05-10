@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">BestAge60+</string>
+    <string name="funatiMain">
+        <b>ATIVIDADES REALIZADAS</b>
+        \n<b>ENSINO:</b> Capacita profissionais para atuarem no âmbito do envelhecimento com Cursos de Especialização em Gerontologia e Saúde do Idoso, além de viabilizar programas de planejamento para aposentadorias em instituições públicas e privadas
+        \n<b>PESQUISA:</b> investe em pesquisa sobre envelhecimento de populações ribeirinhas amazônicas em parceria com Universidades do Brasil e do exterior.
+        \n<b>EXTENSÃO:</b> Oferece semestralmente em sua sede e nos Centros de Convivências do Idoso parceiros do Estado do Amazonas mais de 3.000 matrículas destinadas a pessoas com idade igual ou superior a 50 anos de idade , por meio de oficinas e cursos gratuitos, como aulas de inglês, informática, aulas de danças, atividades físicas, geronturismo, aulas de teatro.
+        \n<b>POLICLÍNICA FUNATI:</b> Proporciona assistência de saúde para comunidade por meio de sua própria policlínica que realiza em média 40 atendimentos especializados por dia, oferecendo serviços de nutrição, fisioterapia, psicologia e outros de atenção básica.
+    </string>
+    <string name="funatiTitle">
+        <b>Fundação Universidade Aberta da Terceira Idade</b>
+    </string>
+    <string name="txtTitleSeniorCitizenConcilActivity">
+        <b>Conselho Municipal do Idoso</b>
+    </string>
+    <string name="txtMainSeniorCitizenConcilActivity">
+        O Conselho Municipal do Idoso – CMI –, foi criado pela Lei nº 628, de 8 de novembro de 2001. É um órgão colegiado de caráter consultivo, deliberativo e controlador da política de defesa dos direitos do idoso, veiculado à Fundação Dr. Thomas, responsável pela coordenação e execução da política municipal de defesa dos direitos do idoso.
+        São competências do Conselho Municipal do Idoso:\n
+        I – a definição de diretrizes, deliberação, acompanhamento e controle da Política Municipal do Idoso;
+        \nII – a proteção e defesa dos direitos do Idoso, observada a legislação em vigor, corroborando para a sua plena inserção na vida sócio-econômica e político-cultural do Município de Manaus, objetivando, ainda, a eliminação de preconceitos;
+        \nIII – a indicação de prioridades de atuação e de definição da aplicação dos recursos públicos municipais destinados às políticas sociais básicas de atenção ao Idoso;
+        \nIV – a aprovação da proposta orçamentária do Município a ser encaminhada pelo órgão coordenador da Política Municipal do Idoso;
+        \nV – a proposição aos poderes constituídos de modificações nas estruturas dos órgãos governamentais diretamente ligados à promoção, proteção e defesa dos direitos do Idoso;
+        \nVI – o oferecimento de subsídios para a elaboração de leis atinentes aos interesses dos Idosos;
+        \nVII – a constante interface com os Conselhos de Direitos e de Políticas Setoriais;
+        \nVIII – o incentivo e o apoio à realização de eventos, estudos e pesquisas no campo da promoção, da proteção e da defesa dos direitos do Idoso;
+        \nIX – a promoção de intercâmbio com entidades públicas, particulares, organismos nacionais, internacionais e estrangeiros, visando atender a seus objetivos;
+        \nX – o pronunciamento, a emissão de pareceres e a prestação de informações sobre assuntos que digam respeito à promoção, à proteção e à defesa dos direitos do idoso;
+        \nXI – a elaboração e aprovação do seu Regimento Interno;
+        \nXII – a aprovação, de acordo com critérios estabelecidos em seu regimento interno, do cadastramento de entidades de defesa ou de atendimento ao Idoso que pretendam integrar o Conselho;
+        \nXIII – o recebimento de petições, denúncias, reclamações, representações ou queixas de qualquer pessoa por desrespeito aos direitos assegurados aos Idosos, adotando as medidas cabíveis;
+        \nXIV – a convocação a Fórum das Entidades Não-Governamentais, para eleição dos seus representantes no Conselho;
+        \nO Conselho é constituído, paritariamente, por 08 (oito) representantes de Organizações Governamentais e 08 (oito) de Organização não-governamentais.\n
+        \nPresidente: Márcia Santos.\n
+        O Conselho Municipal do Idoso funciona no Centro Social Urbano – Parque 10 de Novembro, na avenida Perimetral, nº 22 – Conjunto Castelo Branco. Telefone para contato: (92) 98844-5148
+    </string>
+    <string name="txtTitleEderlyLawActivity">
+        <b>LEI Nº 10.741 DE 01 DE OUTUBRO DE 2003</b>
+    </string>
+    <string name="txtMainEderlyLawActivity">
+        <b>Data de assinatura:</b>
+        01 de Outubro de 2003\n
+        <b>Ementa:</b>
+        DISPÕE SOBRE O ESTATUTO DO IDOSO E DÁ OUTRAS PROVIDÊNCIAS.\n
+        <b>Situação:</b>
+        Não consta revogação expressa\n
+        <b>Chefe de Governo:</b>
+        Luiz Inácio Lula da Silva\n
+        <b>Origem:</b>
+        Legislativo\n
+        <b>Data de Publicação:</b>
+        03 de Outubro de 2003\n
+        <b>Fonte:</b>
+        D.O.U de 03/10/2003, pág. nº 1\n
+        <b>Assunto:</b>
+        CRIAÇÃO, ESTATUTO, IDOSO, DEFINIÇÃO, DIREITOS, ASSISTÊNCIA, ATENDIMENTO, PRESERVAÇÃO, CIDADANIA, DIREITO A VIDA, DIREITO A SAÚDE, ATIVIDADE CULTURAL, EDUCAÇÃO, LAZER, ESPORTE, TRANSPORTE GRATUITO, PRIORIDADE, PROCEDIMENTO JUDICIAL, HABITAÇÃO, PESSOA FÍSICA, LIMITE DE IDADE, CONCURSOS.\n
+        <b>Classificação de direito:</b>
+        DIREITO CONSTITUCIONAL; DIREITO PREVIDENCIÁRIO. SEGURIDADE SOCIAL; DIREITO PROCESSUAL CIVIL; DIREITO PENAL\n
+    </string>
+</resources>
