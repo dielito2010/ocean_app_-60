@@ -17,19 +17,18 @@
             android:textSize="30sp"
             android:layout_margin="@dimen/text_margin"/>
 
+        <ImageView
+            android:id="@+id/imgFunati1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="idosos na funati" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/funatiMain"
             android:textSize="20sp"
             android:layout_margin="@dimen/text_margin"/>
-
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:contentDescription="idosos na funati"-->
-<!--            android:src="@drawable/atividades_funati" />-->
 
         <Button
             android:id="@+id/btnWebFunati"
