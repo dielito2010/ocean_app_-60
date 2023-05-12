@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="COLOQUE O TÍTULO DA MATÉRIA AQUI"
+            android:textSize="30sp"
+            android:layout_margin="@dimen/text_margin"/>
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="COLOQUE A URL DA IMAGEM AQUI" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="COLOQUE O CONTEÚDO DA MATÉRIA AQUI"
+            android:textSize="20sp"
+            android:layout_margin="@dimen/text_margin"/>
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:insetLeft="8dp"
+            android:insetRight="8dp"
+            android:textSize="30sp"
+            android:text="COLOQUE A FONTE (URL) DA MATÉRIA AQUI" />
+
+    </LinearLayout>
+</ScrollView>

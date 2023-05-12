@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "473662010479",
+    "project_id": "best-age-60-plus",
+    "storage_bucket": "best-age-60-plus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473662010479:android:d0a438fe46216b4d8ac99a",
+        "android_client_info": {
+          "package_name": "br.dev.danielribeiro.bestage60"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473662010479-425ncuhcigfv8gp3ar3e7jf8drq9o7tk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdgV9yHw4gxguzPuS46FT_dI8_Tn33dUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473662010479-425ncuhcigfv8gp3ar3e7jf8drq9o7tk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
