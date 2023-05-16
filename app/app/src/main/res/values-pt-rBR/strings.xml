@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">Bem vindo!</string>
+    <string name="password">Senha:</string>
+    <string name="register">CADASTRAR</string>
+    <string name="app_name">BestAge60+</string>
+    <string name="first_name">Nome:</string>
+    <string name="last_name">Sobrenome:</string>
+    <string name="gobacktologin">Voltar para login</string>
+</resources>

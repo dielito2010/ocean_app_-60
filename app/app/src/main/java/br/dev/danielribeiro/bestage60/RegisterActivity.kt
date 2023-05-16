@@ -15,6 +15,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
     private lateinit var spinner: Spinner
     private val options = arrayOf(
         "INFORME SUA CIDADE",
@@ -131,58 +132,63 @@ class RegisterActivity : AppCompatActivity() {
             }
         })
 
-        // Inicializa o Firebase Authentication
+        // Inicializa os serviços firebase
         auth = FirebaseAuth.getInstance()
+        db = FirebaseFirestore.getInstance()
+
+        buttonRegister.setOnClickListener {
+            val city = spinner.selectedItem.toString().trim()
+            val fname = editTextFName.text.toString().trim()
+            val lname = editTextLName.text.toString().trim()
+            val email = editTextEmail.text.toString().trim()
+            val passwd = editTextPasswd.text.toString().trim()
+            registerWithEmailAndPassword(email, passwd)
+            createFirestoreRecord(city, fname, lname, email)
+        }
     }
 
     // Função para cadastrar um novo usuário
-    fun register(view: View) {
-        val editTextEmail: EditText = findViewById(R.id.editTextEmail)
-        val editTextSenha: EditText = findViewById(R.id.editTextSenha)
-        val spinnerCity: Spinner = findViewById(R.id.spinnerCity)
-        val editTextFName: EditText = findViewById(R.id.editTextFName)
-        val editTextLName: EditText = findViewById(R.id.editTextLName)
-        val db = FirebaseFirestore.getInstance()
-        val city = spinnerCity.selectedItem.toString().trim()
-        val senha = editTextSenha.text.toString().trim()
-        val email = editTextEmail.text.toString().trim()
-        val fname = editTextFName.text.toString().trim()
-        val lname = editTextLName.text.toString().trim()
-
-        if (email.isNotEmpty() && senha.isNotEmpty()) {
-            // Cadastra um novo usuário com o Firebase Authentication
-            auth.createUserWithEmailAndPassword(email, senha)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        // Cadastro bem sucedido
-                        val uid = auth.uid
-                        val user = hashMapOf(
-                            "city" to city,
-                            "fname" to fname,
-                            "lname" to lname,
-                            "uid" to uid
-                        )
-                        val usersCollection = db.collection("users")
-                        usersCollection.add(user)
-                            .addOnSuccessListener { documentReference ->
-                                // Sucesso na inserção
-                                Log.d(TAG, "Documento inserido com ID: ${documentReference.id}")
-                            }
-                            .addOnFailureListener { e ->
-                                // Falha na inserção
-                                Log.e(TAG, "Erro ao inserir documento", e)
-                            }
-                        Toast.makeText(this, "Cadastro bem sucedido!", Toast.LENGTH_SHORT).show()
-                        // Abre a tela principal do aplicativo
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    } else {
-                        // Cadastro falhou
-                        Toast.makeText(this, "Erro ao cadastrar", Toast.LENGTH_SHORT).show()
-                    }
+    private fun registerWithEmailAndPassword(email: String, passwd: String) {
+        auth.createUserWithEmailAndPassword(email, passwd)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    Log.d(TAG, "User registration successful")
+                } else {
+                    Log.e(TAG, "User registration failed", task.exception)
+                    Toast.makeText(this, "ERRO AO CADASTRAR", Toast.LENGTH_SHORT).show()
                 }
-        }
+            }
+    }
+
+    private fun createFirestoreRecord(
+        city: String,
+        fname: String,
+        lname: String,
+        email: String){
+        val user = hashMapOf(
+            "city" to city,
+            "fname" to fname,
+            "lname" to lname,
+            "email" to email
+        )
+
+        db.collection("users")
+            .add(user)
+            .addOnSuccessListener { documentReference->
+                Log.d(TAG, "Firestore record created with ID: ${documentReference.id}")
+                Toast.makeText(this, "Dados cadastrados com sucesso!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+            .addOnFailureListener { e ->
+                Log.e(TAG, "Error creating Firestore record", e)
+                Toast.makeText(this, "ERRO AO CADASTRAR", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    companion object {
+        private const val TAG = "RegisterActivity"
     }
 
     fun goBackToLogin(view: View){
