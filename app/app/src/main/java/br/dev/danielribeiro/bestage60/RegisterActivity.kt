@@ -1,6 +1,5 @@
 package br.dev.danielribeiro.bestage60
 
-import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +17,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var spinner: Spinner
     private val options = arrayOf(
-        "Informe sua Cidade:",
+        "INFORME SUA CIDADE",
         "Aracaju",
         "Belém",
         "Belo Horizonte",
@@ -48,7 +47,6 @@ class RegisterActivity : AppCompatActivity() {
         "Vitória"
     )
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -62,7 +60,7 @@ class RegisterActivity : AppCompatActivity() {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 // lógica para lidar com a seleção do usuário
                 val selectedItem = options[position]
-                Toast.makeText(applicationContext, "Selected: $selectedItem", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "$selectedItem", Toast.LENGTH_SHORT).show()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -70,63 +68,73 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
 
-        // Inicializa o Firebase Authentication
-        auth = FirebaseAuth.getInstance()
+        //Validações de campos
+        val editTextFName: EditText = findViewById(R.id.editTextFName)
+        val editTextLName: EditText = findViewById(R.id.editTextLName)
         val editTextEmail: EditText = findViewById(R.id.editTextEmail)
-        val editTextSenha: EditText = findViewById(R.id.editTextSenha)
-        val buttonCadastro: Button = findViewById(R.id.buttonCadastro)
+        val editTextPasswd: EditText = findViewById(R.id.editTextPasswd)
+        val buttonRegister: Button = findViewById(R.id.buttonRegister)
 
-        // Adiciona um ouvinte para o campo de e-mail
+        // Adiciona um ouvinte para o campo de nome
+        editTextFName.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {}
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                // Verifica se o campo de nome é válido
+                val fName = s.toString().trim()
+                val lName = editTextLName.text.toString().trim()
+                val email = editTextEmail.text.toString().trim()
+                val password = editTextPasswd.text.toString().trim()
+                buttonRegister.isEnabled = fName.isNotEmpty() && lName.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()
+            }
+        })
+
+        // Adiciona um ouvinte para o campo de sobrenome
+        editTextLName.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {}
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                // Verifica se o campo de sobrenome é válido
+                val fName = editTextLName.text.toString().trim()
+                val lName = s.toString().trim()
+                val email = editTextEmail.text.toString().trim()
+                val password = editTextPasswd.text.toString().trim()
+                buttonRegister.isEnabled = fName.isNotEmpty() && lName.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()
+            }
+        })
+
+        // Adiciona um ouvinte para o campo de nome
         editTextEmail.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {}
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                // Verifica se o campo de e-mail é válido
+                // Verifica se o campo de nome é válido
+                val fName = editTextFName.text.toString().trim()
+                val lName = editTextLName.text.toString().trim()
                 val email = s.toString().trim()
-                val senha = editTextSenha.text.toString().trim()
-                buttonCadastro.isEnabled = email.isNotEmpty() && senha.isNotEmpty()
+                val password = editTextPasswd.text.toString().trim()
+                buttonRegister.isEnabled = fName.isNotEmpty() && lName.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()
             }
         })
 
-        // Adiciona um ouvinte para o campo de senha
-        editTextSenha.addTextChangedListener(object : TextWatcher {
+        // Adiciona um ouvinte para o campo de nome
+        editTextPasswd.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {}
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                // Verifica se o campo de senha é válida
+                // Verifica se o campo de nome é válido
+                val fName = editTextFName.text.toString().trim()
+                val lName = editTextLName.text.toString().trim()
                 val email = editTextEmail.text.toString().trim()
-                val senha = s.toString().trim()
-                buttonCadastro.isEnabled = email.isNotEmpty() && senha.isNotEmpty()
+                val password = s.toString().trim()
+                buttonRegister.isEnabled = fName.isNotEmpty() && lName.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()
             }
         })
+
+        // Inicializa o Firebase Authentication
+        auth = FirebaseAuth.getInstance()
     }
 
-    // Função para fazer login
-    fun login(view: View) {
-        val editTextEmail: EditText = findViewById(R.id.editTextEmail)
-        val editTextSenha: EditText = findViewById(R.id.editTextSenha)
-        val email = editTextEmail.text.toString().trim()
-        val senha = editTextSenha.text.toString().trim()
-
-        if (email.isNotEmpty() && senha.isNotEmpty()) {
-            // Faz o login com o Firebase Authentication
-            auth.signInWithEmailAndPassword(email, senha)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        // Login bem sucedido
-                        Toast.makeText(this, "Login bem sucedido", Toast.LENGTH_SHORT).show()
-                        // Abre a tela principal do aplicativo
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    } else {
-                        // Login falhou
-                        Toast.makeText(this, "Login falhou", Toast.LENGTH_SHORT).show()
-                    }
-                }
-        }
-
-    }
     // Função para cadastrar um novo usuário
     fun register(view: View) {
         val editTextEmail: EditText = findViewById(R.id.editTextEmail)
@@ -175,5 +183,11 @@ class RegisterActivity : AppCompatActivity() {
                     }
                 }
         }
+    }
+
+    fun goBackToLogin(view: View){
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
