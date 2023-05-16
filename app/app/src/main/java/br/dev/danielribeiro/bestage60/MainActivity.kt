@@ -3,9 +3,11 @@ package br.dev.danielribeiro.bestage60
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         val auth = FirebaseAuth.getInstance()
         val currentUser = auth.currentUser
+        val db = FirebaseFirestore.getInstance()
 
         if (currentUser == null) {
             // Abre a tela de login
@@ -22,8 +25,19 @@ class MainActivity : AppCompatActivity() {
             finish() // Fecha a MainActivity para que o usuário não possa voltar para ela ao pressionar o botão Voltar
         } else {
             val txtCurrentUser = findViewById<TextView>(R.id.txtCurrentUser)
-            val email = currentUser.email
-            txtCurrentUser.text = email
+            val emailFirebase = currentUser.email
+            val collectionRef = db.collection("users")
+            collectionRef.whereEqualTo("email", emailFirebase)
+                .get()
+                .addOnSuccessListener { querySnapshot ->
+                    for (document in querySnapshot) {
+                        val data = document.data
+                        txtCurrentUser.text = data.getValue("fname") as CharSequence?
+                    }
+                }
+                .addOnFailureListener { e ->
+                    Log.e(MainActivity.TAG, "Error to get First Name", e)
+                }
         }
 
         val btnLogOut = findViewById<Button>(R.id.btnLogOut)
@@ -45,5 +59,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ElderlyLawActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    companion object {
+        private const val TAG = "MAinActivity"
     }
 }
