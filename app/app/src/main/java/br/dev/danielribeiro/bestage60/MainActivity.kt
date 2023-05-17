@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
             finish() // Fecha a MainActivity para que o usuário não possa voltar para ela ao pressionar o botão Voltar
         } else {
             val txtCurrentUser = findViewById<TextView>(R.id.txtCurrentUser)
+            val btnLogOut = findViewById<Button>(R.id.btnLogOut)
             val emailFirebase = currentUser.email
             val collectionRef = db.collection("users")
             collectionRef.whereEqualTo("email", emailFirebase)
@@ -32,12 +33,25 @@ class MainActivity : AppCompatActivity() {
                 .addOnSuccessListener { querySnapshot ->
                     for (document in querySnapshot) {
                         val data = document.data
-                        txtCurrentUser.text = data.getValue("fname") as CharSequence?
+                        txtCurrentUser.text = "Olá " + data.getValue("fname") as CharSequence?
+                        btnLogOut.isEnabled = currentUser != null
                     }
                 }
                 .addOnFailureListener { e ->
-                    Log.e(MainActivity.TAG, "Error to get First Name", e)
+                    Log.e(TAG, "Error to get First Name", e)
                 }
+        }
+
+        val btnHealthAndWellBeing = findViewById<Button>(R.id.btnHealthAndWellBeing)
+        btnHealthAndWellBeing.setOnClickListener {
+            val intent = Intent(this, HealthAndWellBeingActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnLifestyleAndBehavior = findViewById<Button>(R.id.btnLifestyleAndBehavior)
+        btnLifestyleAndBehavior.setOnClickListener {
+            val intent = Intent(this, LifestyleAndBehaviorActivity::class.java)
+            startActivity(intent)
         }
 
         val btnLogOut = findViewById<Button>(R.id.btnLogOut)

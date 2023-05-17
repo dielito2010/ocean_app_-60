@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">BestAge60+</string>
     <string name="funatiMain">
-        <b>ATIVIDADES REALIZADAS</b>
-        \n<b>ENSINO:</b> Capacita profissionais para atuarem no âmbito do envelhecimento com Cursos de Especialização em Gerontologia e Saúde do Idoso, além de viabilizar programas de planejamento para aposentadorias em instituições públicas e privadas
-        \n<b>PESQUISA:</b> investe em pesquisa sobre envelhecimento de populações ribeirinhas amazônicas em parceria com Universidades do Brasil e do exterior.
-        \n<b>EXTENSÃO:</b> Oferece semestralmente em sua sede e nos Centros de Convivências do Idoso parceiros do Estado do Amazonas mais de 3.000 matrículas destinadas a pessoas com idade igual ou superior a 50 anos de idade , por meio de oficinas e cursos gratuitos, como aulas de inglês, informática, aulas de danças, atividades físicas, geronturismo, aulas de teatro.
-        \n<b>POLICLÍNICA FUNATI:</b> Proporciona assistência de saúde para comunidade por meio de sua própria policlínica que realiza em média 40 atendimentos especializados por dia, oferecendo serviços de nutrição, fisioterapia, psicologia e outros de atenção básica.
-    </string>
+        <b>ATIVIDADES REALIZADAS</b> \n<b>ENSINO:</b> Capacita profissionais para atuarem no âmbito
+        do envelhecimento com Cursos de Especialização em Gerontologia e Saúde do Idoso, além de
+        viabilizar programas de planejamento para aposentadorias em instituições públicas e privadas
+        \n<b>PESQUISA:</b> investe em pesquisa sobre envelhecimento de populações ribeirinhas
+        amazônicas em parceria com Universidades do Brasil e do exterior. \n<b>EXTENSÃO:</b> Oferece
+        semestralmente em sua sede e nos Centros de Convivências do Idoso parceiros do Estado do
+        Amazonas mais de 3.000 matrículas destinadas a pessoas com idade igual ou superior a 50 anos
+        de idade , por meio de oficinas e cursos gratuitos, como aulas de inglês, informática, aulas
+        de danças, atividades físicas, geronturismo, aulas de teatro. \n<b>POLICLÍNICA FUNATI:</b>
+        Proporciona assistência de saúde para comunidade por meio de sua própria policlínica que
+        realiza em média 40 atendimentos especializados por dia, oferecendo serviços de nutrição,
+        fisioterapia, psicologia e outros de atenção básica. </string>
     <string name="funatiTitle">
         <b>Fundação Universidade Aberta da Terceira Idade</b>
     </string>
@@ -14,49 +20,143 @@
         <b>Conselho Municipal do Idoso</b>
     </string>
     <string name="txtMainSeniorCitizenConcilActivity">
-        O Conselho Municipal do Idoso – CMI –, foi criado pela Lei nº 628, de 8 de novembro de 2001. É um órgão colegiado de caráter consultivo, deliberativo e controlador da política de defesa dos direitos do idoso, veiculado à Fundação Dr. Thomas, responsável pela coordenação e execução da política municipal de defesa dos direitos do idoso.
+        O Conselho Municipal do Idoso – CMI –, foi criado pela Lei nº 628, de 8 de novembro de 2001.
+        É um órgão colegiado de caráter consultivo, deliberativo e controlador da política de defesa
+        dos direitos do idoso, veiculado à Fundação Dr. Thomas, responsável pela coordenação e
+        execução da política municipal de defesa dos direitos do idoso.
         São competências do Conselho Municipal do Idoso:\n
-        I – a definição de diretrizes, deliberação, acompanhamento e controle da Política Municipal do Idoso;
-        \nII – a proteção e defesa dos direitos do Idoso, observada a legislação em vigor, corroborando para a sua plena inserção na vida sócio-econômica e político-cultural do Município de Manaus, objetivando, ainda, a eliminação de preconceitos;
-        \nIII – a indicação de prioridades de atuação e de definição da aplicação dos recursos públicos municipais destinados às políticas sociais básicas de atenção ao Idoso;
-        \nIV – a aprovação da proposta orçamentária do Município a ser encaminhada pelo órgão coordenador da Política Municipal do Idoso;
-        \nV – a proposição aos poderes constituídos de modificações nas estruturas dos órgãos governamentais diretamente ligados à promoção, proteção e defesa dos direitos do Idoso;
-        \nVI – o oferecimento de subsídios para a elaboração de leis atinentes aos interesses dos Idosos;
+        I – a definição de diretrizes, deliberação, acompanhamento e controle da Política Municipal
+        do Idoso;
+        \nII – a proteção e defesa dos direitos do Idoso, observada a legislação em vigor,
+        corroborando para a sua plena inserção na vida sócio-econômica e político-cultural do
+        Município de Manaus, objetivando, ainda, a eliminação de preconceitos;
+        \nIII – a indicação de prioridades de atuação e de definição da aplicação dos recursos
+        públicos municipais destinados às políticas sociais básicas de atenção ao Idoso;
+        \nIV – a aprovação da proposta orçamentária do Município a ser encaminhada pelo órgão
+        coordenador da Política Municipal do Idoso;
+        \nV – a proposição aos poderes constituídos de modificações nas estruturas dos órgãos
+        governamentais diretamente ligados à promoção, proteção e defesa dos direitos do Idoso;
+        \nVI – o oferecimento de subsídios para a elaboração de leis atinentes aos interesses dos
+        Idosos;
         \nVII – a constante interface com os Conselhos de Direitos e de Políticas Setoriais;
-        \nVIII – o incentivo e o apoio à realização de eventos, estudos e pesquisas no campo da promoção, da proteção e da defesa dos direitos do Idoso;
-        \nIX – a promoção de intercâmbio com entidades públicas, particulares, organismos nacionais, internacionais e estrangeiros, visando atender a seus objetivos;
-        \nX – o pronunciamento, a emissão de pareceres e a prestação de informações sobre assuntos que digam respeito à promoção, à proteção e à defesa dos direitos do idoso;
+        \nVIII – o incentivo e o apoio à realização de eventos, estudos e pesquisas no campo da
+        promoção, da proteção e da defesa dos direitos do Idoso;
+        \nIX – a promoção de intercâmbio com entidades públicas, particulares, organismos nacionais,
+        internacionais e estrangeiros, visando atender a seus objetivos;
+        \nX – o pronunciamento, a emissão de pareceres e a prestação de informações sobre assuntos
+        que digam respeito à promoção, à proteção e à defesa dos direitos do idoso;
         \nXI – a elaboração e aprovação do seu Regimento Interno;
-        \nXII – a aprovação, de acordo com critérios estabelecidos em seu regimento interno, do cadastramento de entidades de defesa ou de atendimento ao Idoso que pretendam integrar o Conselho;
-        \nXIII – o recebimento de petições, denúncias, reclamações, representações ou queixas de qualquer pessoa por desrespeito aos direitos assegurados aos Idosos, adotando as medidas cabíveis;
-        \nXIV – a convocação a Fórum das Entidades Não-Governamentais, para eleição dos seus representantes no Conselho;
-        \nO Conselho é constituído, paritariamente, por 08 (oito) representantes de Organizações Governamentais e 08 (oito) de Organização não-governamentais.\n
+        \nXII – a aprovação, de acordo com critérios estabelecidos em seu regimento interno, do
+        cadastramento de entidades de defesa ou de atendimento ao Idoso que pretendam integrar o
+        Conselho;
+        \nXIII – o recebimento de petições, denúncias, reclamações, representações ou queixas de
+        qualquer pessoa por desrespeito aos direitos assegurados aos Idosos, adotando as medidas
+        cabíveis;
+        \nXIV – a convocação a Fórum das Entidades Não-Governamentais, para eleição dos seus
+        representantes no Conselho;
+        \nO Conselho é constituído, paritariamente, por 08 (oito) representantes de Organizações
+        Governamentais e 08 (oito) de Organização não-governamentais.\n
         \nPresidente: Márcia Santos.\n
-        O Conselho Municipal do Idoso funciona no Centro Social Urbano – Parque 10 de Novembro, na avenida Perimetral, nº 22 – Conjunto Castelo Branco. Telefone para contato: (92) 98844-5148
+        O Conselho Municipal do Idoso funciona no Centro Social Urbano – Parque 10 de Novembro, na
+        avenida Perimetral, nº 22 – Conjunto Castelo Branco. Telefone para contato: (92) 98844-5148
     </string>
     <string name="txtTitleEderlyLawActivity">
         <b>LEI Nº 10.741 DE 01 DE OUTUBRO DE 2003</b>
     </string>
-    <string name="txtMainEderlyLawActivity">
-        <b>Data de assinatura:</b>
-        01 de Outubro de 2003\n
-        <b>Ementa:</b>
-        DISPÕE SOBRE O ESTATUTO DO IDOSO E DÁ OUTRAS PROVIDÊNCIAS.\n
-        <b>Situação:</b>
-        Não consta revogação expressa\n
-        <b>Chefe de Governo:</b>
-        Luiz Inácio Lula da Silva\n
-        <b>Origem:</b>
-        Legislativo\n
-        <b>Data de Publicação:</b>
-        03 de Outubro de 2003\n
-        <b>Fonte:</b>
-        D.O.U de 03/10/2003, pág. nº 1\n
-        <b>Assunto:</b>
-        CRIAÇÃO, ESTATUTO, IDOSO, DEFINIÇÃO, DIREITOS, ASSISTÊNCIA, ATENDIMENTO, PRESERVAÇÃO, CIDADANIA, DIREITO A VIDA, DIREITO A SAÚDE, ATIVIDADE CULTURAL, EDUCAÇÃO, LAZER, ESPORTE, TRANSPORTE GRATUITO, PRIORIDADE, PROCEDIMENTO JUDICIAL, HABITAÇÃO, PESSOA FÍSICA, LIMITE DE IDADE, CONCURSOS.\n
-        <b>Classificação de direito:</b>
-        DIREITO CONSTITUCIONAL; DIREITO PREVIDENCIÁRIO. SEGURIDADE SOCIAL; DIREITO PROCESSUAL CIVIL; DIREITO PENAL\n
+    <string name="txtTitleConceptOfTheBestAgeActivity">
+        <b>O que é terceira idade e quais os cuidados ao chegar nessa fase?</b>
     </string>
+    <string name="txtMainConceptOfTheBestAgeActivity"> Enquanto alguns veem o envelhecimento como
+        algo negativo, outros entendem essa fase da vida como um sinal de liberdade e uma época de
+        novas possibilidades. A diferença entre eles é a forma como enxergam as coisas e como agem
+        com relação a isso.\n É claro que, nessa etapa, alguns cuidados especiais devem ser tomados
+        para que se tenha qualidade de vida, apesar das limitações que a terceira idade pode
+        acarretar. Por isso, neste post, iremos explicar exatamente o que é terceira idade e quais
+        os cuidados ao chegar nessa fase. Continue a leitura e confira!\n <b>O que é terceira
+        idade?\n</b> O termo terceira idade surgiu na França, em 1962, quando a política de
+        integração social que visava à transformação da imagem da velhice foi introduzida.\n
+        Terceira idade pode ser considerada a fase entre a aposentadoria e o envelhecimento, e é uma
+        etapa em que o corpo humano perde em muito sua capacidade de regeneração, necessitando uma
+        série de cuidados especiais.\n Porém, devido aos avanços da medicina e da qualidade de vida,
+        está cada vez mais difícil estabelecer uma idade específica para o início da terceira idade,
+        já que as pessoas estão chegando lá cada vez mais fortes, ativas e saudáveis.\n <b>Com qual
+        idade começa a terceira idade no Brasil e no mundo?\n</b> No Brasil, segundo o estatuto do
+        idoso, uma pessoa é considerada na terceira idade quando atinge 60 anos. Porém, devido ao
+        aumento da qualidade de vida no Brasil e dos avanços nos cuidados da saúde dos idosos, já
+        existe um projeto de lei que propõe o aumento desse marco para 65 anos.\n <b>A Organização
+        Mundial da Saúde (OMS) classifica o envelhecimento em quatro estágios:\n</b> Meia-idade: 45
+        a 59 anos;\n Idoso ou terceira idade: 60 a 74 anos;\n Ancião: 75 a 90 anos;\n Velhice
+        extrema: 90 anos em diante.\n Visto que idosos com mais acesso a cuidados chegam na terceira
+        idade com maior vigor, a OMS estabeleceu ainda que em países desenvolvidos a terceira idade
+        se inicia aos 65 anos e em países em desenvolvimento se inicia aos 60 anos.\n Um estudo
+        feito pela Universidade de São Paulo (USP) aponta que, até 2030 o Brasil terá a quinta
+        população mais idosa do mundo.\n Em resumo, quanto mais cuidado a pessoa tem com a própria
+        saúde, mais ela terá a chance de se tornar um idoso ativo, com boa qualidade de vida,
+        realizando atividades de trabalho, intelectuais e exercícios físicos.A velhice chega para
+        todo mundo e nos resta fazer dela uma fase sem grandes complicações e o mais agradável
+        possível. Por isso, confira abaixo alguns cuidados essenciais para se ter na terceira
+        idade:\n <b>Acompanhamento médico especializado</b> Já falamos que o corpo e a saúde do
+        idoso passam por grandes mudanças, por isso hábitos de vida precisam ser adaptados para
+        ajudar esse corpo a ir cada vez mais longe. Por isso, é de extrema importância que o idoso
+        tenha um acompanhamento mais frequente. O geriatra é o médico especialista em pessoas da
+        terceira idade. Esse acompanhamento se faz necessário devido às diversas mudanças durante
+        essa faixa etária. Além disso, pode ser necessário o uso de medicações para prevenir doenças
+        e reposições de nutrientes e ninguém melhor para prescrever isso do que um especialista.\n
+        <b>Organização com medicamentos\n</b> A maioria dos idosos precisam tomar uma quantidade alta de
+        medicamentos diariamente e com certeza você conhece alguma história de idoso que ingeriu
+        medicamento trocado ou fora de hora, correto? Esse é um ponto de extrema atenção. É muito
+        importante levar em consideração a pontualidade e o modo correto de ingerir medicamentos,
+        principalmente na terceira idade. Uma ação simples pode ser inserir nos lembretes do celular
+        os horários certos contando com a ajuda de um despertador.\n <b>Boa alimentação\n</b> A alimentação é
+        um fator importantíssimo para uma vida saudável e longa. Uma dieta balanceada com proteínas
+        de carnes variadas ou vegetais além de nutrientes de legumes, frutas, cereais ajudam na
+        longevidade. Além do mais, a diminuição da ingestão de carboidratos simples e açúcares
+        ajudam na diminuição dos riscos da temida doença de Alzheimer. É interessante também que o
+        idoso tenha um acompanhamento nutricional, pois ele pode prescrever uma dieta que consiga
+        suprir todas as necessidades energéticas diárias da pessoa, adaptando à rotina de cada um.
+        Lembre-se: o corpo e a mente reagem bem à uma alimentação saudável.\n <b>
+            Atividades da vida diária\n
+        </b> Existem muitos estudos que relacionam a aposentadoria tardia com maior longevidade.
+        Isso não quer dizer que você precisa ter sua carteira assinada até os 80 anos. Significa que
+        quanto mais ativo permanece o corpo, mais tempo ele demora para sofrer os efeitos do tempo.
+        Tarefas do dia a dia como lavar vasilhas, cozinhar, limpar a casa, cuidar das plantas, entre
+        outros, ajudam muito na manutenção da força e resistência física do idoso. Manter o corpo
+        ocupado é essencial, mas cuidado: é importante respeitar as limitações de cada um.\n
+        <b>Atividades físicas\n</b> Falando em manter o corpo ocupado, nada como praticar regularmente
+        atividades físicas para manter o corpo em forma, prevenir doenças e ainda respirar um ar
+        puro. Há uma gama enorme de atividades físicas que podem ajudar a pessoa na terceira idade a
+        se manter em plena forma e muitas delas ainda promovem uma boa dose de interação social. A
+        grande favorita dos idosos é a hidroginástica, já que ela tem baixo impacto sobre as
+        articulações e promove um bom ganho respiratório. Mas muitas outras atividades podem ser
+        realizadas como caminhada, Pilates e musculação, por exemplo, sempre levando em consideração
+        as aptidões físicas e limitações de cada fase da terceira idade.\n <b>Convívio social\n</b> Um corpo de
+        ferro sem uma mente boa não ajuda em nada, não é mesmo? É importante, para a saúde mental na
+        terceira idade, manter contato próximo de outras pessoas, sejam eles familiares, amigos,
+        companheiros de trabalho ou de atividades físicas. Lembre-se: nós não estamos sozinhos. É
+        imprescindível compartilhar experiências e interagir com o mundo. É muito comum que a pessoa
+        da terceira idade tenha menos disposição de sair de casa para ter essas interações sociais,
+        portanto é importante que a família se aproxime e estimule o contato com outras pessoas.
+        Ambiente adaptado Um ponto muito importante para pessoas na terceira idade é terem a casa
+        adaptada para garantir sua independência sem descuidar da segurança. Separamos abaixo
+        algumas dicas para evitar acidentes domésticos:\n Instalação de barras e corrimãos onde o piso
+        é irregular ou pode ser escorregadio;\n Desobstruir e ampliar as áreas de circulação;\n Tapetes
+        e objetos no chão podem ser uma armadilha para os idosos. Eles devem ser bem posicionados ou
+        removidos para evitar acidentes;\n Instalação de prateleiras baixas e interruptores em alturas
+        acessíveis;\n Manter ambientes bem iluminados.\n Com essas dicas será possível trazer mais
+        conforto e bem-estar aos idosos.\n A maioria dos cuidados são simples e podem ser feitos
+        rapidamente para garantia de uma vida mais tranquila na terceira idade. E se você quer saber
+        mais sobre os cuidados com o idoso. </string>
+    <string name="txtMainEderlyLawActivity">
+        <b>Data de assinatura:</b> 01 de Outubro de 2003\n <b>Ementa:</b> DISPÕE SOBRE O ESTATUTO DO
+        IDOSO E DÁ OUTRAS PROVIDÊNCIAS.\n <b>Situação:</b> Não consta revogação expressa\n <b>Chefe
+        de Governo:</b> Luiz Inácio Lula da Silva\n <b>Origem:</b> Legislativo\n <b>Data de
+        Publicação:</b> 03 de Outubro de 2003\n <b>Fonte:</b> D.O.U de 03/10/2003, pág. nº 1\n <b>
+        Assunto:</b> CRIAÇÃO, ESTATUTO, IDOSO, DEFINIÇÃO, DIREITOS, ASSISTÊNCIA, ATENDIMENTO,
+        PRESERVAÇÃO, CIDADANIA, DIREITO A VIDA, DIREITO A SAÚDE, ATIVIDADE CULTURAL, EDUCAÇÃO,
+        LAZER, ESPORTE, TRANSPORTE GRATUITO, PRIORIDADE, PROCEDIMENTO JUDICIAL, HABITAÇÃO, PESSOA
+        FÍSICA, LIMITE DE IDADE, CONCURSOS.\n <b>Classificação de direito:</b> DIREITO
+        CONSTITUCIONAL; DIREITO PREVIDENCIÁRIO. SEGURIDADE SOCIAL; DIREITO PROCESSUAL CIVIL; DIREITO
+        PENAL\n </string>
     <string name="welcome">Welcome!</string>
     <string name="e_mail">E-mail:</string>
     <string name="password">Password:</string>
@@ -65,4 +165,9 @@
     <string name="first_name">First Name:</string>
     <string name="last_name">Last Name:</string>
     <string name="gobacktologin">goBackToLogin</string>
+    <string name="logout">logout</string>
+    <string name="health_and_well_being">health and well being</string>
+    <string name="lifestyle_and_behavior">Lifestyle and Behavior</string>
+    <string name="concept_of_the_best_age">concept of the best age</string>
+    <string name="link">link</string>
 </resources>

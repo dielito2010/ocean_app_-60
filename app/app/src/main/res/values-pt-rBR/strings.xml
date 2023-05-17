@@ -7,4 +7,9 @@
     <string name="first_name">Nome:</string>
     <string name="last_name">Sobrenome:</string>
     <string name="gobacktologin">Voltar para login</string>
+    <string name="logout">Sair</string>
+    <string name="health_and_well_being">saúde e bem estar</string>
+    <string name="lifestyle_and_behavior">estilo de vida e comportamento</string>
+    <string name="concept_of_the_best_age">conceito da melhor idade</string>
+    <string name="link">acesse a fonte</string>
 </resources>

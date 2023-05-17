@@ -14,13 +14,9 @@
         <TextView
             android:id="@+id/txtCurrentUser"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btnLogOut"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="logout" />
+            android:textAlignment="center"
+            android:textSize="30sp"/>
 
         <Button
             android:id="@+id/btn1"
@@ -32,22 +28,22 @@
             android:text="destaques do amazonas" />
 
         <Button
-            android:id="@+id/btn2"
+            android:id="@+id/btnHealthAndWellBeing"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
-            android:text="saúde e bem estar" />
+            android:text="@string/health_and_well_being" />
 
         <Button
-            android:id="@+id/btn3"
+            android:id="@+id/btnLifestyleAndBehavior"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
-            android:text="estilo de vida e comportamento" />
+            android:text="@string/lifestyle_and_behavior" />
 
         <Button
             android:id="@+id/btn4"
@@ -84,6 +80,16 @@
             android:insetRight="8dp"
             android:textSize="30sp"
             android:text="estatuto do idoso" />
+
+        <Button
+            android:id="@+id/btnLogOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="8dp"
+            android:insetRight="8dp"
+            android:textSize="30sp"
+            android:enabled="false"
+            android:text="@string/logout" />
 
     </LinearLayout>
 </ScrollView>

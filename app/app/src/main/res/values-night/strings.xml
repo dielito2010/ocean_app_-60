@@ -8,4 +8,9 @@
     <string name="first_name">First Name:</string>
     <string name="last_name">Last Name:</string>
     <string name="gobacktologin">goBackToLogin</string>
+    <string name="logout">logout</string>
+    <string name="health_and_well_being">health and well being</string>
+    <string name="lifestyle_and_behavior">Lifestyle and Behavior</string>
+    <string name="concept_of_the_best_age">concept of the best age</string>
+    <string name="link">link</string>
 </resources>
