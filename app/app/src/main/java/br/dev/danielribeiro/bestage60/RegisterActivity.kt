@@ -142,22 +142,27 @@ class RegisterActivity : AppCompatActivity() {
             val lname = editTextLName.text.toString().trim()
             val email = editTextEmail.text.toString().trim()
             val passwd = editTextPasswd.text.toString().trim()
-            registerWithEmailAndPassword(email, passwd)
+            registerWithEmailAndPassword(email, passwd, city)
             createFirestoreRecord(city, fname, lname, email)
         }
     }
 
     // Função para cadastrar um novo usuário
-    private fun registerWithEmailAndPassword(email: String, passwd: String) {
-        auth.createUserWithEmailAndPassword(email, passwd)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    Log.d(TAG, "User registration successful")
-                } else {
-                    Log.e(TAG, "User registration failed", task.exception)
-                    Toast.makeText(this, "ERRO AO CADASTRAR", Toast.LENGTH_SHORT).show()
+    private fun registerWithEmailAndPassword(email: String, passwd: String, city: String) {
+        if (city == "INFORME SUA CIDADE"){
+            Toast.makeText(this, "OBRIGATÓRIO INFORMAR UMA CIDADE", Toast.LENGTH_SHORT).show()
+            return
+        } else {
+            auth.createUserWithEmailAndPassword(email, passwd)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        Log.d(TAG, "User registration successful")
+                    } else {
+                        Log.e(TAG, "User registration failed", task.exception)
+                        Toast.makeText(this, "ERRO AO CADASTRAR", Toast.LENGTH_SHORT).show()
+                    }
                 }
-            }
+        }
     }
 
     private fun createFirestoreRecord(
@@ -165,28 +170,34 @@ class RegisterActivity : AppCompatActivity() {
         fname: String,
         lname: String,
         email: String){
-        val user = hashMapOf(
-            "city" to city,
-            "fname" to fname,
-            "lname" to lname,
-            "email" to email
-        )
 
-        db.collection("users")
-            .add(user)
-            .addOnSuccessListener { documentReference->
-                Log.d(TAG, "Firestore record created with ID: ${documentReference.id}")
-                Toast.makeText(this, "Dados cadastrados com sucesso!", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
-            .addOnFailureListener { e ->
-                Log.e(TAG, "Error creating Firestore record", e)
-                Toast.makeText(this, "ERRO AO CADASTRAR", Toast.LENGTH_SHORT).show()
-            }
+        if (city == "INFORME SUA CIDADE"){
+            Toast.makeText(this, "OBRIGATÓRIO INFORMAR UMA CIDADE", Toast.LENGTH_SHORT).show()
+            return
+        } else {
+            val user = hashMapOf(
+                "city" to city,
+                "fname" to fname,
+                "lname" to lname,
+                "email" to email
+            )
+            db.collection("users")
+                .add(user)
+                .addOnSuccessListener { documentReference ->
+                    Log.d(TAG, "Firestore record created with ID: ${documentReference.id}")
+                    Toast.makeText(this, "Dados cadastrados com sucesso!", Toast.LENGTH_SHORT)
+                        .show()
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                .addOnFailureListener { e ->
+                    Log.e(TAG, "Error creating Firestore record", e)
+                    Toast.makeText(this, "ERRO AO CADASTRAR", Toast.LENGTH_SHORT).show()
+                }
+        }
     }
-
+    
     companion object {
         private const val TAG = "RegisterActivity"
     }

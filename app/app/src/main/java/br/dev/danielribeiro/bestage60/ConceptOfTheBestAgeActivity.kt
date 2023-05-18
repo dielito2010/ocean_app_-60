@@ -15,9 +15,14 @@ class ConceptOfTheBestAgeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_concept_of_the_best_age)
 
+        var imgConceptOfTheBestAgeActivity = findViewById<ImageView>(R.id.imgConceptOfTheBestAgeActivity)
+        Glide.with(this)
+            .load("https://images.pexels.com/photos/339620/pexels-photo-339620.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1")
+            .into(imgConceptOfTheBestAgeActivity)
+
         var imgConceptOfTheBestAgeActivity1 = findViewById<ImageView>(R.id.imgConceptOfTheBestAgeActivity1)
         Glide.with(this)
-            .load("https://images.pexels.com/photos/339620/pexels-photo-339620.jpeg")
+            .load("https://images.pexels.com/photos/6158652/pexels-photo-6158652.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1")
             .into(imgConceptOfTheBestAgeActivity1)
 
         var btnConceptOfTheBestAgeActivityWeb = findViewById<Button>(R.id.btnConceptOfTheBestAgeActivityWeb)

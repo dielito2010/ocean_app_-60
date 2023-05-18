@@ -17,6 +17,20 @@
             android:layout_margin="@dimen/text_margin"/>
 
         <ImageView
+            android:id="@+id/imgConceptOfTheBestAgeActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="img" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:text="@string/txtMainConceptOfTheBestAgeActivity"
+            android:textSize="20sp"
+            android:layout_margin="@dimen/text_margin"/>
+
+        <ImageView
             android:id="@+id/imgConceptOfTheBestAgeActivity1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,14 +39,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/txtMainConceptOfTheBestAgeActivity"
+            android:text="@string/txtMainConceptOfTheBestAgeActivity1"
             android:textSize="20sp"
             android:layout_margin="@dimen/text_margin"/>
 
         <Button
             android:id="@+id/btnConceptOfTheBestAgeActivityWeb"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"

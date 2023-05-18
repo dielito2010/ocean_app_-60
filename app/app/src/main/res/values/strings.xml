@@ -68,24 +68,29 @@
     </string>
     <string name="txtMainConceptOfTheBestAgeActivity"> Enquanto alguns veem o envelhecimento como
         algo negativo, outros entendem essa fase da vida como um sinal de liberdade e uma época de
-        novas possibilidades. A diferença entre eles é a forma como enxergam as coisas e como agem
+        novas possibilidades.\n A diferença entre eles é a forma como enxergam as coisas e como agem
         com relação a isso.\n É claro que, nessa etapa, alguns cuidados especiais devem ser tomados
         para que se tenha qualidade de vida, apesar das limitações que a terceira idade pode
-        acarretar. Por isso, neste post, iremos explicar exatamente o que é terceira idade e quais
-        os cuidados ao chegar nessa fase. Continue a leitura e confira!\n <b>O que é terceira
-        idade?\n</b> O termo terceira idade surgiu na França, em 1962, quando a política de
-        integração social que visava à transformação da imagem da velhice foi introduzida.\n
-        Terceira idade pode ser considerada a fase entre a aposentadoria e o envelhecimento, e é uma
-        etapa em que o corpo humano perde em muito sua capacidade de regeneração, necessitando uma
-        série de cuidados especiais.\n Porém, devido aos avanços da medicina e da qualidade de vida,
-        está cada vez mais difícil estabelecer uma idade específica para o início da terceira idade,
-        já que as pessoas estão chegando lá cada vez mais fortes, ativas e saudáveis.\n <b>Com qual
-        idade começa a terceira idade no Brasil e no mundo?\n</b> No Brasil, segundo o estatuto do
-        idoso, uma pessoa é considerada na terceira idade quando atinge 60 anos. Porém, devido ao
-        aumento da qualidade de vida no Brasil e dos avanços nos cuidados da saúde dos idosos, já
-        existe um projeto de lei que propõe o aumento desse marco para 65 anos.\n <b>A Organização
-        Mundial da Saúde (OMS) classifica o envelhecimento em quatro estágios:\n</b> Meia-idade: 45
-        a 59 anos;\n Idoso ou terceira idade: 60 a 74 anos;\n Ancião: 75 a 90 anos;\n Velhice
+        acarretar.\n Por isso, neste post, iremos explicar exatamente o que é terceira idade e quais
+        os cuidados ao chegar nessa fase. Continue a leitura e confira!\n
+    </string>
+    <string name="txtMainConceptOfTheBestAgeActivity1">
+        <b>\nO que é terceira idade?\n\n</b> O termo terceira idade surgiu na França, em 1962,
+        quando a política de integração social que visava à transformação da imagem da velhice foi
+        introduzida.\n Terceira idade pode ser considerada a fase entre a aposentadoria e o
+        envelhecimento, e é uma etapa em que o corpo humano perde em muito sua capacidade de
+        regeneração, necessitando uma série de cuidados especiais.\n Porém, devido aos avanços da
+        medicina e da qualidade de vida, está cada vez mais difícil estabelecer uma idade específica
+        para o início da terceira idade, já que as pessoas estão chegando lá cada vez mais fortes,
+        ativas e saudáveis.\n </string>
+    <string name="txtMainConceptOfTheBestAgeActivity2">
+        <b>\nCom qual idade começa a terceira idade no Brasil e no mundo?\n</b> No Brasil, segundo o
+        estatuto do idoso, uma pessoa é considerada na terceira idade quando atinge 60 anos. Porém,
+        devido ao aumento da qualidade de vida no Brasil e dos avanços nos cuidados da saúde dos
+        idosos, já existe um projeto de lei que propõe o aumento desse marco para 65 anos.\n <b>A
+        Organização
+            Mundial da Saúde (OMS) classifica o envelhecimento em quatro estágios:\n</b> Meia-idade:
+        45 a 59 anos;\n Idoso ou terceira idade: 60 a 74 anos;\n Ancião: 75 a 90 anos;\n Velhice
         extrema: 90 anos em diante.\n Visto que idosos com mais acesso a cuidados chegam na terceira
         idade com maior vigor, a OMS estabeleceu ainda que em países desenvolvidos a terceira idade
         se inicia aos 65 anos e em países em desenvolvimento se inicia aos 60 anos.\n Um estudo
@@ -101,47 +106,48 @@
         tenha um acompanhamento mais frequente. O geriatra é o médico especialista em pessoas da
         terceira idade. Esse acompanhamento se faz necessário devido às diversas mudanças durante
         essa faixa etária. Além disso, pode ser necessário o uso de medicações para prevenir doenças
-        e reposições de nutrientes e ninguém melhor para prescrever isso do que um especialista.\n
-        <b>Organização com medicamentos\n</b> A maioria dos idosos precisam tomar uma quantidade alta de
+        e reposições de nutrientes e ninguém melhor para prescrever isso do que um especialista.\n <b>Organização
+        com medicamentos\n</b> A maioria dos idosos precisam tomar uma quantidade alta de
         medicamentos diariamente e com certeza você conhece alguma história de idoso que ingeriu
         medicamento trocado ou fora de hora, correto? Esse é um ponto de extrema atenção. É muito
         importante levar em consideração a pontualidade e o modo correto de ingerir medicamentos,
         principalmente na terceira idade. Uma ação simples pode ser inserir nos lembretes do celular
-        os horários certos contando com a ajuda de um despertador.\n <b>Boa alimentação\n</b> A alimentação é
-        um fator importantíssimo para uma vida saudável e longa. Uma dieta balanceada com proteínas
-        de carnes variadas ou vegetais além de nutrientes de legumes, frutas, cereais ajudam na
-        longevidade. Além do mais, a diminuição da ingestão de carboidratos simples e açúcares
-        ajudam na diminuição dos riscos da temida doença de Alzheimer. É interessante também que o
-        idoso tenha um acompanhamento nutricional, pois ele pode prescrever uma dieta que consiga
-        suprir todas as necessidades energéticas diárias da pessoa, adaptando à rotina de cada um.
-        Lembre-se: o corpo e a mente reagem bem à uma alimentação saudável.\n <b>
-            Atividades da vida diária\n
-        </b> Existem muitos estudos que relacionam a aposentadoria tardia com maior longevidade.
-        Isso não quer dizer que você precisa ter sua carteira assinada até os 80 anos. Significa que
-        quanto mais ativo permanece o corpo, mais tempo ele demora para sofrer os efeitos do tempo.
-        Tarefas do dia a dia como lavar vasilhas, cozinhar, limpar a casa, cuidar das plantas, entre
-        outros, ajudam muito na manutenção da força e resistência física do idoso. Manter o corpo
-        ocupado é essencial, mas cuidado: é importante respeitar as limitações de cada um.\n
-        <b>Atividades físicas\n</b> Falando em manter o corpo ocupado, nada como praticar regularmente
-        atividades físicas para manter o corpo em forma, prevenir doenças e ainda respirar um ar
-        puro. Há uma gama enorme de atividades físicas que podem ajudar a pessoa na terceira idade a
-        se manter em plena forma e muitas delas ainda promovem uma boa dose de interação social. A
-        grande favorita dos idosos é a hidroginástica, já que ela tem baixo impacto sobre as
-        articulações e promove um bom ganho respiratório. Mas muitas outras atividades podem ser
-        realizadas como caminhada, Pilates e musculação, por exemplo, sempre levando em consideração
-        as aptidões físicas e limitações de cada fase da terceira idade.\n <b>Convívio social\n</b> Um corpo de
-        ferro sem uma mente boa não ajuda em nada, não é mesmo? É importante, para a saúde mental na
-        terceira idade, manter contato próximo de outras pessoas, sejam eles familiares, amigos,
-        companheiros de trabalho ou de atividades físicas. Lembre-se: nós não estamos sozinhos. É
-        imprescindível compartilhar experiências e interagir com o mundo. É muito comum que a pessoa
-        da terceira idade tenha menos disposição de sair de casa para ter essas interações sociais,
-        portanto é importante que a família se aproxime e estimule o contato com outras pessoas.
-        Ambiente adaptado Um ponto muito importante para pessoas na terceira idade é terem a casa
-        adaptada para garantir sua independência sem descuidar da segurança. Separamos abaixo
-        algumas dicas para evitar acidentes domésticos:\n Instalação de barras e corrimãos onde o piso
-        é irregular ou pode ser escorregadio;\n Desobstruir e ampliar as áreas de circulação;\n Tapetes
-        e objetos no chão podem ser uma armadilha para os idosos. Eles devem ser bem posicionados ou
-        removidos para evitar acidentes;\n Instalação de prateleiras baixas e interruptores em alturas
+        os horários certos contando com a ajuda de um despertador.\n <b>Boa alimentação\n</b> A
+        alimentação é um fator importantíssimo para uma vida saudável e longa. Uma dieta balanceada
+        com proteínas de carnes variadas ou vegetais além de nutrientes de legumes, frutas, cereais
+        ajudam na longevidade. Além do mais, a diminuição da ingestão de carboidratos simples e
+        açúcares ajudam na diminuição dos riscos da temida doença de Alzheimer. É interessante
+        também que o idoso tenha um acompanhamento nutricional, pois ele pode prescrever uma dieta
+        que consiga suprir todas as necessidades energéticas diárias da pessoa, adaptando à rotina
+        de cada um. Lembre-se: o corpo e a mente reagem bem à uma alimentação saudável.\n <b>
+        Atividades da vida diária\n
+        </b> Existem muitos estudos que relacionam a
+        aposentadoria tardia com maior longevidade. Isso não quer dizer que você precisa ter sua
+        carteira assinada até os 80 anos. Significa que quanto mais ativo permanece o corpo, mais
+        tempo ele demora para sofrer os efeitos do tempo. Tarefas do dia a dia como lavar vasilhas,
+        cozinhar, limpar a casa, cuidar das plantas, entre outros, ajudam muito na manutenção da
+        força e resistência física do idoso. Manter o corpo ocupado é essencial, mas cuidado: é
+        importante respeitar as limitações de cada um.\n <b>Atividades físicas\n</b> Falando em
+        manter o corpo ocupado, nada como praticar regularmente atividades físicas para manter o
+        corpo em forma, prevenir doenças e ainda respirar um ar puro. Há uma gama enorme de
+        atividades físicas que podem ajudar a pessoa na terceira idade a se manter em plena forma e
+        muitas delas ainda promovem uma boa dose de interação social. A grande favorita dos idosos é
+        a hidroginástica, já que ela tem baixo impacto sobre as articulações e promove um bom ganho
+        respiratório. Mas muitas outras atividades podem ser realizadas como caminhada, Pilates e
+        musculação, por exemplo, sempre levando em consideração as aptidões físicas e limitações de
+        cada fase da terceira idade.\n <b>Convívio social\n</b> Um corpo de ferro sem uma mente boa
+        não ajuda em nada, não é mesmo? É importante, para a saúde mental na terceira idade, manter
+        contato próximo de outras pessoas, sejam eles familiares, amigos, companheiros de trabalho
+        ou de atividades físicas. Lembre-se: nós não estamos sozinhos. É imprescindível compartilhar
+        experiências e interagir com o mundo. É muito comum que a pessoa da terceira idade tenha
+        menos disposição de sair de casa para ter essas interações sociais, portanto é importante
+        que a família se aproxime e estimule o contato com outras pessoas. Ambiente adaptado Um
+        ponto muito importante para pessoas na terceira idade é terem a casa adaptada para garantir
+        sua independência sem descuidar da segurança. Separamos abaixo algumas dicas para evitar
+        acidentes domésticos:\n Instalação de barras e corrimãos onde o piso é irregular ou pode ser
+        escorregadio;\n Desobstruir e ampliar as áreas de circulação;\n Tapetes e objetos no chão
+        podem ser uma armadilha para os idosos. Eles devem ser bem posicionados ou removidos para
+        evitar acidentes;\n Instalação de prateleiras baixas e interruptores em alturas
         acessíveis;\n Manter ambientes bem iluminados.\n Com essas dicas será possível trazer mais
         conforto e bem-estar aos idosos.\n A maioria dos cuidados são simples e podem ser feitos
         rapidamente para garantia de uma vida mais tranquila na terceira idade. E se você quer saber
