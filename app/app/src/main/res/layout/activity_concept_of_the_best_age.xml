@@ -43,6 +43,34 @@
             android:textSize="20sp"
             android:layout_margin="@dimen/text_margin"/>
 
+        <ImageView
+            android:id="@+id/imgConceptOfTheBestAgeActivity2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="img" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtMainConceptOfTheBestAgeActivity2"
+            android:textSize="20sp"
+            android:layout_margin="@dimen/text_margin"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtMainConceptOfTheBestAgeActivity3"
+            android:textSize="20sp"
+            android:layout_margin="@dimen/text_margin"/>
+
+        <ImageView
+            android:id="@+id/imgConceptOfTheBestAgeActivity3"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="img" />
+
         <Button
             android:id="@+id/btnConceptOfTheBestAgeActivityWeb"
             android:layout_width="match_parent"

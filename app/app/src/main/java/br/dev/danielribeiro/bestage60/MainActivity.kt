@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                 .addOnSuccessListener { querySnapshot ->
                     for (document in querySnapshot) {
                         val data = document.data
-                        txtCurrentUser.text = "Olá " + data.getValue("fname") as CharSequence?
+                        txtCurrentUser.text = "Bem vindo!  " + data.getValue("fname") as CharSequence?
                         btnLogOut.isEnabled = currentUser != null
                     }
                 }
@@ -76,6 +76,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        private const val TAG = "MAinActivity"
+        const val TAG = "MAinActivity"
     }
 }

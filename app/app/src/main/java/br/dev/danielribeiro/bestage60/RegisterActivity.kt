@@ -18,34 +18,9 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var db: FirebaseFirestore
     private lateinit var spinner: Spinner
     private val options = arrayOf(
-        "INFORME SUA CIDADE",
-        "Aracaju",
-        "Belém",
-        "Belo Horizonte",
-        "Boa Vista",
-        "Brasília",
-        "Campo Grande",
-        "Cuiabá",
-        "Curitiba",
-        "Florianópolis",
-        "Fortaleza",
-        "Goiânia",
-        "João Pessoa",
-        "Macapá",
-        "Maceió",
-        "Manaus",
-        "Natal",
-        "Palmas",
-        "Porto Alegre",
-        "Porto Velho",
-        "Recife",
-        "Rio Branco",
-        "Rio de Janeiro",
-        "Salvador",
-        "São Luís",
-        "São Paulo",
-        "Teresina",
-        "Vitória"
+        "INFORME SUA CIDADE", "Aracaju", "Belém", "Belo Horizonte", "Boa Vista", "Brasília", "Campo Grande", "Cuiabá", "Curitiba",
+        "Florianópolis", "Fortaleza", "Goiânia", "João Pessoa", "Macapá", "Maceió", "Manaus", "Natal", "Palmas", "Porto Alegre",
+        "Porto Velho", "Recife", "Rio Branco", "Rio de Janeiro", "Salvador", "São Luís", "São Paulo", "Teresina", "Vitória"
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -153,13 +128,17 @@ class RegisterActivity : AppCompatActivity() {
             Toast.makeText(this, "OBRIGATÓRIO INFORMAR UMA CIDADE", Toast.LENGTH_SHORT).show()
             return
         } else {
+            val progressBar: ProgressBar = findViewById(R.id.progressbarReg)
+            progressBar.setVisibility(View.VISIBLE)
             auth.createUserWithEmailAndPassword(email, passwd)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         Log.d(TAG, "User registration successful")
+                        progressBar.setVisibility(View.GONE)
                     } else {
                         Log.e(TAG, "User registration failed", task.exception)
                         Toast.makeText(this, "ERRO AO CADASTRAR", Toast.LENGTH_SHORT).show()
+                        progressBar.setVisibility(View.GONE)
                     }
                 }
         }
@@ -171,33 +150,47 @@ class RegisterActivity : AppCompatActivity() {
         lname: String,
         email: String){
 
-        if (city == "INFORME SUA CIDADE"){
-            Toast.makeText(this, "OBRIGATÓRIO INFORMAR UMA CIDADE", Toast.LENGTH_SHORT).show()
-            return
-        } else {
-            val user = hashMapOf(
-                "city" to city,
-                "fname" to fname,
-                "lname" to lname,
-                "email" to email
-            )
-            db.collection("users")
-                .add(user)
-                .addOnSuccessListener { documentReference ->
-                    Log.d(TAG, "Firestore record created with ID: ${documentReference.id}")
-                    Toast.makeText(this, "Dados cadastrados com sucesso!", Toast.LENGTH_SHORT)
-                        .show()
-                    val intent = Intent(this, MainActivity::class.java)
+        val collectionRef = db.collection("users")
+        collectionRef.whereEqualTo("email", email)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                for (document in querySnapshot) {
+                    val data = document.data
+                    Toast.makeText(this, "ATENÇÃO: Email já cadastrado!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
-                .addOnFailureListener { e ->
-                    Log.e(TAG, "Error creating Firestore record", e)
-                    Toast.makeText(this, "ERRO AO CADASTRAR", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                if (city == "INFORME SUA CIDADE"){
+                    Toast.makeText(this, "OBRIGATÓRIO INFORMAR UMA CIDADE", Toast.LENGTH_SHORT).show()
+                    return@addOnFailureListener
+                } else {
+                    val user = hashMapOf(
+                        "city" to city,
+                        "fname" to fname,
+                        "lname" to lname,
+                        "email" to email
+                    )
+                    db.collection("users")
+                        .add(user)
+                        .addOnSuccessListener { documentReference ->
+                            Log.d(TAG, "Firestore record created with ID: ${documentReference.id}")
+                            Toast.makeText(this, "Dados cadastrados com sucesso!", Toast.LENGTH_SHORT)
+                                .show()
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+                        .addOnFailureListener { e ->
+                            Log.e(TAG, "Error creating Firestore record", e)
+                            Toast.makeText(this, "ERRO AO CADASTRAR", Toast.LENGTH_SHORT).show()
+                        }
                 }
-        }
+            }
     }
-    
+
     companion object {
         private const val TAG = "RegisterActivity"
     }

@@ -25,6 +25,16 @@ class ConceptOfTheBestAgeActivity : AppCompatActivity() {
             .load("https://images.pexels.com/photos/6158652/pexels-photo-6158652.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1")
             .into(imgConceptOfTheBestAgeActivity1)
 
+        var imgConceptOfTheBestAgeActivity2 = findViewById<ImageView>(R.id.imgConceptOfTheBestAgeActivity2)
+        Glide.with(this)
+            .load("https://images.pexels.com/photos/6158652/pexels-photo-6158652.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1")
+            .into(imgConceptOfTheBestAgeActivity2)
+
+        var imgConceptOfTheBestAgeActivity3 = findViewById<ImageView>(R.id.imgConceptOfTheBestAgeActivity3)
+        Glide.with(this)
+            .load("https://images.pexels.com/photos/6158652/pexels-photo-6158652.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1")
+            .into(imgConceptOfTheBestAgeActivity3)
+
         var btnConceptOfTheBestAgeActivityWeb = findViewById<Button>(R.id.btnConceptOfTheBestAgeActivityWeb)
         btnConceptOfTheBestAgeActivityWeb.setOnClickListener {
             val url = "https://vivatecs.com/ebook"

@@ -21,12 +21,14 @@ class LoginActivity : AppCompatActivity() {
 
     // Função para fazer login
     fun login(view: View) {
+        val progressBar: ProgressBar = findViewById(R.id.progressbarLogin)
         val editTextEmail: EditText = findViewById(R.id.editTextEmail)
         val editTextSenha: EditText = findViewById(R.id.editTextSenha)
         val email = editTextEmail.text.toString().trim()
         val senha = editTextSenha.text.toString().trim()
 
         if (email.isNotEmpty() && senha.isNotEmpty()) {
+            progressBar.setVisibility(View.VISIBLE)
             // Faz o login com o Firebase Authentication
             auth.signInWithEmailAndPassword(email, senha)
                 .addOnCompleteListener(this) { task ->
@@ -34,12 +36,14 @@ class LoginActivity : AppCompatActivity() {
                         // Login bem sucedido
                         Toast.makeText(this, "Login bem sucedido", Toast.LENGTH_SHORT).show()
                         // Abre a tela principal do aplicativo
+                        progressBar.setVisibility(View.GONE)
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                         finish()
                     } else {
                         // Login falhou
                         Toast.makeText(this, "ERRO: verifique email e senha...", Toast.LENGTH_SHORT).show()
+                        progressBar.setVisibility(View.GONE)
                     }
                 }
         } else {
