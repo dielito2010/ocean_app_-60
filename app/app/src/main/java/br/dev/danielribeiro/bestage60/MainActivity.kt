@@ -33,13 +33,33 @@ class MainActivity : AppCompatActivity() {
                 .addOnSuccessListener { querySnapshot ->
                     for (document in querySnapshot) {
                         val data = document.data
-                        txtCurrentUser.text = "Bem vindo!  " + data.getValue("fname") as CharSequence?
+                        val welcome = resources.getString(R.string.welcome)
+                        val fname = data.getValue("fname") as CharSequence?
+                        val lname = data.getValue("lname") as CharSequence?
+                        txtCurrentUser.text = "${welcome} \n ${fname} ${lname}"
                         btnLogOut.isEnabled = currentUser != null
                     }
                 }
                 .addOnFailureListener { e ->
                     Log.e(TAG, "Error to get First Name", e)
                 }
+        }
+
+        val btnNotables = findViewById<Button>(R.id.btnNotables)
+        val emailFirebase = auth.currentUser?.email
+        val collectionRef = db.collection("users")
+        collectionRef.whereEqualTo("email", emailFirebase)
+            .get()
+            .addOnSuccessListener { querySnapshot ->
+                for (document in querySnapshot) {
+                    var city = document.getString("city")
+                    val btnName = resources.getString(R.string.notables_of)
+                    btnNotables.text = "${btnName} \n ${city}"
+                }
+            }
+        btnNotables.setOnClickListener {
+            val intent = Intent(this, NewsCityActivity::class.java)
+            startActivity(intent)
         }
 
         val btnHealthAndWellBeing = findViewById<Button>(R.id.btnHealthAndWellBeing)
@@ -60,12 +80,6 @@ class MainActivity : AppCompatActivity() {
             val loginActivity = Intent(this, LoginActivity::class.java)
             startActivity(loginActivity)
             finish()
-        }
-
-        val btn1 = findViewById<Button>(R.id.btn1)
-        btn1.setOnClickListener {
-            val intent = Intent(this, NewsCityActivity::class.java)
-            startActivity(intent)
         }
 
         val btn7 = findViewById<Button>(R.id.btn7)

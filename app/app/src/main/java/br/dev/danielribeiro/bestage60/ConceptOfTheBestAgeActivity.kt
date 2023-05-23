@@ -27,12 +27,12 @@ class ConceptOfTheBestAgeActivity : AppCompatActivity() {
 
         var imgConceptOfTheBestAgeActivity2 = findViewById<ImageView>(R.id.imgConceptOfTheBestAgeActivity2)
         Glide.with(this)
-            .load("https://images.pexels.com/photos/6158652/pexels-photo-6158652.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1")
+            .load("https://images.pexels.com/photos/302083/pexels-photo-302083.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1")
             .into(imgConceptOfTheBestAgeActivity2)
 
         var imgConceptOfTheBestAgeActivity3 = findViewById<ImageView>(R.id.imgConceptOfTheBestAgeActivity3)
         Glide.with(this)
-            .load("https://images.pexels.com/photos/6158652/pexels-photo-6158652.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1")
+            .load("https://images.pexels.com/photos/8172941/pexels-photo-8172941.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=1")
             .into(imgConceptOfTheBestAgeActivity3)
 
         var btnConceptOfTheBestAgeActivityWeb = findViewById<Button>(R.id.btnConceptOfTheBestAgeActivityWeb)

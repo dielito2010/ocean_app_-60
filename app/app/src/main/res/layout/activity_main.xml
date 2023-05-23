@@ -19,13 +19,14 @@
             android:textSize="30sp"/>
 
         <Button
-            android:id="@+id/btn1"
+            android:id="@+id/btnNotables"
             android:layout_width="match_parent"
             android:layout_height="120dp"
+            android:layout_marginTop="40dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
-            android:text="destaques do amazonas" />
+            android:text="@string/notables_of" />
 
         <Button
             android:id="@+id/btnHealthAndWellBeing"
@@ -34,6 +35,7 @@
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
+            android:enabled="false"
             android:text="@string/health_and_well_being" />
 
         <Button
@@ -52,6 +54,7 @@
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
+            android:enabled="false"
             android:text="viagens e turismo" />
 
         <Button
@@ -61,6 +64,7 @@
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
+            android:enabled="false"
             android:text="cultura e entretenimento" />
 
         <Button
@@ -70,6 +74,8 @@
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
+            android:enabled="false"
+
             android:text="finanças e oportunidades" />
 
         <Button
@@ -85,6 +91,7 @@
             android:id="@+id/btnLogOut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
