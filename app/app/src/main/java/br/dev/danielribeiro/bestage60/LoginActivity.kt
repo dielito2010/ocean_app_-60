@@ -19,11 +19,6 @@ class LoginActivity : AppCompatActivity() {
 
         // Inicializa o Firebase Authentication
         auth = FirebaseAuth.getInstance()
-
-        var imgLogo = findViewById<ImageView>(R.id.imgLogo)
-        Glide.with(this)
-            .load("https://raw.githubusercontent.com/dielito2010/ocean_app_mais_60/main/img/Captura%20de%20tela%202023-04-13%20152001.jpg")
-            .into(imgLogo)
     }
 
     // Função para fazer login
