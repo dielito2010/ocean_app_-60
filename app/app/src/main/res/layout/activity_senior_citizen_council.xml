@@ -30,10 +30,11 @@
         <Button
             android:id="@+id/btnFooterSeniorCitizenCouncilActivity"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="120dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
-            android:text="fonte: FUNDAÇÃO DOUTOR THOMAS" />
+            android:textSize="30sp"
+            android:text="@string/link" />
 
     </LinearLayout>
 </ScrollView>

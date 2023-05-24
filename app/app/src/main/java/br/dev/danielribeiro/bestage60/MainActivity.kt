@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -56,13 +54,29 @@ class MainActivity : AppCompatActivity() {
                 for (document in querySnapshot) {
                     var city = document.getString("city")
                     val btnName = resources.getString(R.string.notables_of)
-                    btnNotables.text = "${btnName} \n ${city}"
+                    when (city){
+                        "Manaus" -> {
+                            btnNotables.isEnabled = true
+                            btnNotables.text = "${btnName} \n ${city}"
+                            btnNotables.setOnClickListener {
+                                val intent = Intent(this, NewsManausActivity::class.java)
+                                startActivity(intent)
+                            }
+                        }
+                        "São Paulo" -> {
+                            btnNotables.isEnabled = true
+                            btnNotables.text = "${btnName} \n ${city}"
+                            btnNotables.setOnClickListener {
+                                val intent = Intent(this, NewsSaoPauloActivity::class.java)
+                                startActivity(intent)
+                            }
+                        }
+                        else -> {
+                        btnNotables.text = "confira destaques nacionais abaixo:"
+                        }
+                    }
                 }
             }
-        btnNotables.setOnClickListener {
-            val intent = Intent(this, NewsCityActivity::class.java)
-            startActivity(intent)
-        }
 
         val btnHealthAndWellBeing = findViewById<Button>(R.id.btnHealthAndWellBeing)
         btnHealthAndWellBeing.setOnClickListener {

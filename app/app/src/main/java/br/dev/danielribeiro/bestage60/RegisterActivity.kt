@@ -38,9 +38,8 @@ class RegisterActivity : AppCompatActivity() {
                 val selectedItem = options[position]
                 Toast.makeText(applicationContext, "$selectedItem", Toast.LENGTH_SHORT).show()
             }
-
             override fun onNothingSelected(parent: AdapterView<*>) {
-                // lógica para lidar com nenhum item selecionado
+                Toast.makeText(applicationContext, "Selecione uma cidade", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -117,55 +116,27 @@ class RegisterActivity : AppCompatActivity() {
             val lname = editTextLName.text.toString().trim()
             val email = editTextEmail.text.toString().trim()
             val passwd = editTextPasswd.text.toString().trim()
-            registerWithEmailAndPassword(email, passwd, city)
-            createFirestoreRecord(city, fname, lname, email)
+            if (city == "INFORME SUA CIDADE"){
+                Toast.makeText(this, "OBRIGATÓRIO INFORMAR UMA CIDADE", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            } else {
+                createFirestoreRecord(city, fname, lname, email)
+                registerWithEmailAndPassword(email, passwd)
+            }
         }
     }
 
-    // Função para cadastrar um novo usuário
-    private fun registerWithEmailAndPassword(email: String, passwd: String, city: String) {
-        if (city == "INFORME SUA CIDADE"){
-            Toast.makeText(this, "OBRIGATÓRIO INFORMAR UMA CIDADE", Toast.LENGTH_SHORT).show()
-            return
-        } else {
-            val progressBar: ProgressBar = findViewById(R.id.progressbarReg)
-            progressBar.setVisibility(View.VISIBLE)
-            auth.createUserWithEmailAndPassword(email, passwd)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        Log.d(TAG, "User registration successful")
-                        progressBar.setVisibility(View.GONE)
-                    } else {
-                        Log.e(TAG, "User registration failed", task.exception)
-                        Toast.makeText(this, "ERRO AO CADASTRAR", Toast.LENGTH_SHORT).show()
-                        progressBar.setVisibility(View.GONE)
-                    }
-                }
-        }
-    }
-
-    private fun createFirestoreRecord(
-        city: String,
-        fname: String,
-        lname: String,
-        email: String){
-
+    private fun createFirestoreRecord(city: String, fname: String, lname: String, email: String){
         val collectionRef = db.collection("users")
         collectionRef.whereEqualTo("email", email)
             .get()
-            .addOnSuccessListener { querySnapshot ->
-                for (document in querySnapshot) {
-                    val data = document.data
+            .addOnSuccessListener { documents  ->
+                if (!documents.isEmpty) {
+                    Log.d(TAG, "ATENÇÃO: Email já cadastrado!")
                     Toast.makeText(this, "ATENÇÃO: Email já cadastrado!", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
-                }
-            }
-            .addOnFailureListener {
-                if (city == "INFORME SUA CIDADE"){
-                    Toast.makeText(this, "OBRIGATÓRIO INFORMAR UMA CIDADE", Toast.LENGTH_SHORT).show()
-                    return@addOnFailureListener
                 } else {
                     val user = hashMapOf(
                         "city" to city,
@@ -177,11 +148,7 @@ class RegisterActivity : AppCompatActivity() {
                         .add(user)
                         .addOnSuccessListener { documentReference ->
                             Log.d(TAG, "Firestore record created with ID: ${documentReference.id}")
-                            Toast.makeText(this, "Dados cadastrados com sucesso!", Toast.LENGTH_SHORT)
-                                .show()
-                            val intent = Intent(this, MainActivity::class.java)
-                            startActivity(intent)
-                            finish()
+                            Toast.makeText(this, "Dados cadastrados com sucesso!", Toast.LENGTH_SHORT).show()
                         }
                         .addOnFailureListener { e ->
                             Log.e(TAG, "Error creating Firestore record", e)
@@ -189,6 +156,30 @@ class RegisterActivity : AppCompatActivity() {
                         }
                 }
             }
+            .addOnFailureListener {e ->
+                Log.e(TAG, "Error get Firestore email", e)
+            }
+    }
+
+    // Função para cadastrar um novo usuário
+    private fun registerWithEmailAndPassword(email: String, passwd: String) {
+        val progressBar: ProgressBar = findViewById(R.id.progressbarReg)
+        progressBar.setVisibility(View.VISIBLE)
+        auth.createUserWithEmailAndPassword(email, passwd)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    Log.d(TAG, "User registration successful")
+                    progressBar.setVisibility(View.GONE)
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Log.e(TAG, "User registration failed", task.exception)
+                    Toast.makeText(this, "ERRO AO CADASTRAR", Toast.LENGTH_SHORT).show()
+                    progressBar.setVisibility(View.GONE)
+                }
+            }
+
     }
 
     companion object {
