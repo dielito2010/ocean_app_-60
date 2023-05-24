@@ -35,7 +35,6 @@
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
-            android:enabled="false"
             android:text="@string/health_and_well_being" />
 
         <Button

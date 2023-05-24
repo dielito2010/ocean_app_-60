@@ -9,34 +9,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="COLOQUE O TÍTULO DA MATÉRIA AQUI"
-            android:textSize="30sp"
-            android:layout_margin="@dimen/text_margin"/>
-
-        <ImageView
-            android:id="@+id/img1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="COLOQUE A URL DA IMAGEM AQUI" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="COLOQUE O CONTEÚDO DA MATÉRIA AQUI"
-            android:textSize="20sp"
-            android:layout_margin="@dimen/text_margin"/>
-
         <Button
-            android:id="@+id/btn1"
+            android:id="@+id/btnFiveHealthTips"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
-            android:text="COLOQUE A FONTE (URL) DA MATÉRIA AQUI" />
+            android:text="@string/_5_health_tips_for_people_in_their_60_years" />
 
     </LinearLayout>
 </ScrollView>

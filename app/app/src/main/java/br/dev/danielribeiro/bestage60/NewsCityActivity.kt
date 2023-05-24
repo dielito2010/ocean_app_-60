@@ -10,6 +10,12 @@ class NewsCityActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_city)
 
+        val btnZumbaManaus = findViewById<Button>(R.id.btnZumbaManaus)
+        btnZumbaManaus.setOnClickListener {
+            val intent = Intent(this, ZumbaManausActivity::class.java)
+            startActivity(intent)
+        }
+
         val btn2 = findViewById<Button>(R.id.btn2)
         btn2.setOnClickListener {
             val intent = Intent(this, FunatiNewsActivity::class.java)

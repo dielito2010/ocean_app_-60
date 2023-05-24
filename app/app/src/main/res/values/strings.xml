@@ -132,6 +132,53 @@
         FÍSICA, LIMITE DE IDADE, CONCURSOS.\n <b>Classificação de direito:</b> DIREITO
         CONSTITUCIONAL; DIREITO PREVIDENCIÁRIO. SEGURIDADE SOCIAL; DIREITO PROCESSUAL CIVIL; DIREITO
         PENAL\n </string>
+    <string name="txtMainFiveHealthTips">
+        Para envelhecer com saúde, alguns cuidados são necessários. A seguir, separamos 5 dicas para
+        viver com saúde na terceira idade.
+    </string>
+    <string name="txtMainFiveHealthTips1">
+        <b>1 - Tenha hábitos alimentares saudáveis\n\n</b> Para manter a saúde do idoso em dia, é
+        essencial ter uma nutrição adequada. Procure consumir alimentos variados, ricos em
+        nutrientes. Uma dieta rica em alimentos de alto valor nutricional, além de promover mais
+        bem-estar, fortalece o sistema imunológico e deixa diversas doenças bem longe da sua vida.
+        Dessa forma, consuma verduras, legumes, frutas, cereais integrais, carnes brancas, peixes,
+        sementes oleaginosas e beba muita água. Na terceira idade, é ainda mais importante se manter
+        longe das comidas ultraprocessadas, que são ricas em sódio, açúcar, gorduras, conservantes e
+        corantes. Evite massas brancas, frituras, doces em geral, bebidas açucaradas, embutidos,
+        carne vermelha em excesso e guloseimas. <b>\n\n2 - Pratique atividades físicas
+        regularmente\n\n</b> Manter-se ativo é essencial para quem quer viver bem depois dos 60
+        anos, livre de dores musculares e com autonomia no dia a dia. Pessoas sedentárias raramente
+        terão qualidade de vida na terceira idade. A prática de atividades físicas deve fazer parte
+        da rotina de quem busca envelhecer com saúde. Caminhada, natação, pilates, ciclismo, dança
+        de salão, dentre outras atividades, são recomendadas na terceira idade. O ideal é se
+        exercitar de 3 a 5 vezes por semana durante 40 minutos. Entretanto, é importante ter o aval
+        de um médico e o acompanhamento de um educador físico para evitar lesões. <b>\n\n3 -
+            Mantenha em dia as consultas
+            e exames de rotina\n\n</b> Investir na prevenção é fundamental para se ter mais saúde na
+        terceira idade. O avanço dos anos facilita o surgimento de algumas doenças, por isso, é
+        essencial manter as consultas em dia com o médico geriatra, para o diagnóstico precoce e o
+        tratamento adequado dos eventuais agravos à saúde. Diversas doenças são assintomáticas, por
+        isso, é necessário fazer um check-up periódico. Alguns exames de rotina são obrigatórios
+        para quem já passou dos 40 anos e devem ser feitos anualmente. Exames de sangue, próstata,
+        mamografia, ultrassom abdominal, eletrocardiograma, teste de esforço, dentre outros, devem
+        ser realizados por todas as pessoas que desejam envelhecer com saúde. <b>\n\n4 - Tenha uma
+        vida
+            social ativa\n\n</b> Quando o assunto é envelhecer com saúde, a vida social também conta
+        e muito. Pessoas com idade avançada têm a tendência de diminuir o círculo social e, muitas
+        vezes, acabam se isolando. Mas isso não faz bem à saúde mental do idoso, pelo contrário. Por
+        isso, procure sempre ter uma vida social ativa, faça amizades, procure interagir com as
+        pessoas do seu bairro, frequente locais que promovam eventos, passeie, viaje de vez em
+        quando. O importante é investir nos relacionamentos saudáveis e duradouros. <b>\n\n5 -
+        Mantenha a mente estimulada, ativa e produtiva\n\n</b> Para se chegar com toda lucidez e
+        evitar diversas doenças neurológicas, é preciso cuidar também da saúde mental. Para manter a
+        mente ativa, você pode ler, praticar algum instrumento, aprender uma nova língua,
+        desenvolver algum trabalho, participar de ações sociais ou praticar jogos que estimulem a
+        mente, como o xadrez. Quando cuidamos da nossa saúde mental, as chances de sermos acometidos
+        por doenças neurodegenerativas como Alzheimer, Parkinson ou Esclerose Múltipla, por exemplo,
+        se reduzem drasticamente. O nosso cérebro também precisa se exercitar, por isso, devemos
+        sempre estimular a nossa memória através de atividades diárias que têm essa função. </string>
+    <string name="dataDancaSavior">
+        <b>projeto de dança Savior</b>\n quartas e sextas - 19 às 20h\n sábado - 8:30 às 9:45h </string>
     <string name="welcome">Welcome!</string>
     <string name="e_mail">E-mail:</string>
     <string name="password">Password:</string>
@@ -146,4 +193,8 @@
     <string name="concept_of_the_best_age">concept of the best age</string>
     <string name="link">link</string>
     <string name="notables_of">notables of</string>
+    <string name="_5_health_tips_for_people_in_their_60_years">5 Health Tips for People in their 60
+        years</string>
+    <string name="dance_project_savior">
+        <b>PROJETO DE DANÇA SAVIOR\n\</b>Quartas e Sextas - 19 às 20h\nSábado - 8:30 às 9:45h</string>
 </resources>
