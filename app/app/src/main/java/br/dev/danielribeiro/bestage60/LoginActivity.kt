@@ -44,17 +44,51 @@ class LoginActivity : AppCompatActivity() {
                         finish()
                     } else {
                         // Login falhou
-                        Toast.makeText(this, "ERRO: verifique email e senha...", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "ERRO: verifique email e senha...", Toast.LENGTH_SHORT)
+                            .show()
                         progressBar.setVisibility(View.GONE)
                     }
                 }
         } else {
-            Toast.makeText(this,"Informe todo os campos antes de continuar", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Informe todo os campos antes de continuar", Toast.LENGTH_SHORT)
+                .show()
         }
     }
-    fun register(view: View){
+
+    fun register(view: View) {
         val intent = Intent(this, RegisterActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    fun resetPasswd(view: View) {
+        val editTextEmail: EditText = findViewById(R.id.editTextEmail)
+        val email = editTextEmail.text.toString().trim()
+        if (email != null && email != "") {
+            auth.sendPasswordResetEmail(email)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        // E-mail de recuperação de senha enviado com sucesso
+                        Toast.makeText(
+                            this,
+                            "E-mail de recuperação de senha enviado.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        // Ocorreu um erro ao enviar o e-mail de recuperação de senha
+                        Toast.makeText(
+                            this,
+                            "E-mail de recuperação não encontrado.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+        } else {
+            Toast.makeText(
+                this,
+                "Informe um email para recuperar a senha",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 }
