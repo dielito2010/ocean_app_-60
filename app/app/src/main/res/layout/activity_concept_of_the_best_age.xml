@@ -74,7 +74,8 @@
         <Button
             android:id="@+id/btnConceptOfTheBestAgeActivityWeb"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:minHeight="120dp"
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
