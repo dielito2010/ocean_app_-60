@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SaoPauloFriendOfTheElderlyActivity">
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="São Paulo Amigo do Idoso"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/text_margin"/>
+
+        <ImageView
+            android:id="@+id/imgSPFriendElderlyWebActivity"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="img" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txtMainSPFriendElderlyWebActivity"
+            android:textSize="20sp"
+            android:layout_margin="@dimen/text_margin"/>
+
+        <Button
+            android:id="@+id/btnSPFriendElderlyWeb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="120dp"
+            android:insetLeft="8dp"
+            android:insetRight="8dp"
+            android:textSize="30sp"
+            android:text="@string/link" />
+
+    </LinearLayout>
+</ScrollView>

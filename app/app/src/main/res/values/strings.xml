@@ -179,6 +179,24 @@
         sempre estimular a nossa memória através de atividades diárias que têm essa função. </string>
     <string name="dataDancaSavior">
         <b>projeto de dança Savior</b>\n quartas e sextas - 19 às 20h\n sábado - 8:30 às 9:45h </string>
+    <string name="txtMainSPFriendElderlyWebActivity">
+        <b>O que é?\n</b> Programa de fomento e articulação de políticas públicas voltadas à
+        garantia de direitos da pessoa idosa e à promoção do envelhecimento ativo, conforme os 4
+        (quatro) pilares estratégicos preconizados pela Organização Mundial da Saúde (OMS):<b>
+            \n· Participação:</b> ações que reconhecem e permitem a participação integral dos idosos
+        na vida familiar e comunitária, bem como nas atividades de desenvolvimento econômico,
+        trabalho formal e informal e atividades voluntárias, de acordo com suas necessidades
+        individuais, preferências e capacidades; <b>\n· Saúde:</b> ações que previnem e reduzem a
+        carga de doenças crônicas e mortalidade prematura, que diminuem os fatores de risco
+        associados às principais doenças e aumentam os que protegem a saúde durante a vida e que
+        desenvolvem um contínuo de serviços sociais e de saúde acessíveis, de alta qualidade e
+        adequados para a velhice, que aborde as necessidades e os direitos de homens e mulheres em
+        processo de envelhecimento; <b>\n· Proteção:</b> ações que asseguraram a proteção social e a
+        dignidade aos idosos, através da garantia de direitos e do provimento das necessidades
+        relacionais, financeiras e físicas; <b>\n· Educação: </b>ações que propiciem educação e
+        oportunidades de aprendizagem durante todo o curso da vida.\nO Programa São Paulo Amigo do
+        Idoso conjuga esforços de 13 (treze) Secretarias de Estado, do Fundo Social de São Paulo e
+        do Conselho Estadual do Idoso, sob a coordenação da Secretaria de Desenvolvimento Social. </string>
     <string name="welcome">Welcome!</string>
     <string name="e_mail">E-mail:</string>
     <string name="password">Password:</string>

@@ -10,6 +10,8 @@ class NewsManausActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_city)
 
+        //https://fmdi.manaus.am.gov.br/
+
         val btnZumbaManaus = findViewById<Button>(R.id.btnZumbaManaus)
         btnZumbaManaus.setOnClickListener {
             val intent = Intent(this, ZumbaManausActivity::class.java)
