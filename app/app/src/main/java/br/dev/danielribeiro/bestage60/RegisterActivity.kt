@@ -1,9 +1,13 @@
 package br.dev.danielribeiro.bestage60
 
-import android.content.ContentValues.TAG
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.location.LocationManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -14,6 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class RegisterActivity : AppCompatActivity() {
 
+    private lateinit var locationManagerHelper: LocationManagerHelper
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
     private lateinit var spinner: Spinner
@@ -190,5 +195,15 @@ class RegisterActivity : AppCompatActivity() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    fun btnGetGps(view: View){
+        val txtCityGps = findViewById<TextView>(R.id.txtCityGps)
+        locationManagerHelper = LocationManagerHelper(context = this) { location ->
+            val latitude = location.latitude
+            val longitude = location.longitude
+            val cityName = locationManagerHelper.getCityName(latitude, longitude).toString()
+            txtCityGps.text = cityName
+        }
     }
 }
