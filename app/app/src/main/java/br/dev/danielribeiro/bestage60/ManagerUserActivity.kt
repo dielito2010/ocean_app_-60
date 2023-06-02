@@ -76,11 +76,19 @@ class ManagerUserActivity : AppCompatActivity() {
                 // Método chamado após o texto ter sido alterado
                 val novoEmail = s.toString()
                 btnUpdateEmail.setOnClickListener {
-                    if (emailFirebase != novoEmail) atualizarEmail(novoEmail) else Toast.makeText(
-                        this@ManagerUserActivity,
-                        "Verifique o email para poder atualizar...",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    if (emailFirebase != novoEmail) atualizarEmail(novoEmail) else {
+                        val alertDialog =
+                            AlertDialog.Builder(this@ManagerUserActivity) // 'this' representa o contexto da Activity atual
+                                .setTitle("ATENÇÃO:")
+                                .setMessage("O email precisa ser diferente para poder atualizar")
+                                .setPositiveButton("OK") { dialog, _ ->
+                                    // Lógica a ser executada quando o botão OK é pressionado
+                                    dialog.dismiss()
+                                }
+                                .create()
+
+                        alertDialog.show()
+                    }
                 }
             }
         })
@@ -130,46 +138,61 @@ class ManagerUserActivity : AppCompatActivity() {
 
         // Excluir cadastro do Firebase Auth
         user?.delete()?.addOnCompleteListener { authTask ->
-            if (authTask.isSuccessful) {
-                // Cadastro excluído com sucesso no Firebase Auth
+            val alertDialog =
+                AlertDialog.Builder(this) // 'this' representa o contexto da Activity atual
+                    .setTitle("ATENÇÃO:")
+                    .setMessage("Deseja excluir essa conta? Essa operação não poderá ser desfeita.")
+                    .setPositiveButton("OK") { dialog, _ ->
+                        if (authTask.isSuccessful) {
+                            // Cadastro excluído com sucesso no Firebase Auth
 
-                // Excluir documento correspondente no Firestore
-                db.collection("users")
-                    .whereEqualTo("email", email)
-                    .get()
-                    .addOnSuccessListener { documents ->
-                        for (document in documents) {
-                            val docRef = db.collection("users").document(document.id)
-                            docRef.delete()
-                                .addOnSuccessListener {
-                                    // Documento excluído com sucesso no Firestore
-                                    Toast.makeText(
-                                        this,
-                                        "Cadastro excluído com sucesso",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                    val loginActivity = Intent(this, LoginActivity::class.java)
-                                    startActivity(loginActivity)
-                                    finish()
+                            // Excluir documento correspondente no Firestore
+                            db.collection("users")
+                                .whereEqualTo("email", email)
+                                .get()
+                                .addOnSuccessListener { documents ->
+                                    for (document in documents) {
+                                        val docRef = db.collection("users").document(document.id)
+                                        docRef.delete()
+                                            .addOnSuccessListener {
+                                                // Documento excluído com sucesso no Firestore
+                                                Toast.makeText(
+                                                    this,
+                                                    "Cadastro excluído com sucesso",
+                                                    Toast.LENGTH_SHORT
+                                                ).show()
+                                                val loginActivity =
+                                                    Intent(this, LoginActivity::class.java)
+                                                startActivity(loginActivity)
+                                                finish()
+                                            }
+                                            .addOnFailureListener { exception ->
+                                                // Ocorreu um erro ao excluir o documento no Firestore
+                                                Toast.makeText(
+                                                    this,
+                                                    "Erro ao excluir cadastro",
+                                                    Toast.LENGTH_SHORT
+                                                ).show()
+                                            }
+                                    }
                                 }
-                                .addOnFailureListener { exception ->
-                                    // Ocorreu um erro ao excluir o documento no Firestore
-                                    Toast.makeText(
-                                        this,
-                                        "Erro ao excluir cadastro",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                }
+                        } else {
+                            // Ocorreu um erro ao excluir o cadastro no Firebase Auth
+                            Toast.makeText(
+                                this,
+                                "Erro ao excluir cadastro",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
+                        dialog.dismiss()
                     }
-            } else {
-                // Ocorreu um erro ao excluir o cadastro no Firebase Auth
-                Toast.makeText(
-                    this,
-                    "Erro ao excluir cadastro",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+                    .setNegativeButton("Cancelar") { dialog, _ ->
+                        // Lógica a ser executada quando o botão Cancelar é pressionado
+                        dialog.dismiss()
+                    }
+                    .create()
+
+            alertDialog.show()
         }
     }
 }
