@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             finish() // Fecha a MainActivity para que o usuário não possa voltar para ela ao pressionar o botão Voltar
         } else {
             val txtCurrentUser = findViewById<TextView>(R.id.txtCurrentUser)
-            val btnLogOut = findViewById<Button>(R.id.btnLogOut)
+            val btnManagerUser = findViewById<Button>(R.id.btnManagerUser)
             val emailFirebase = currentUser.email
             val collectionRef = db.collection("users")
             collectionRef.whereEqualTo("email", emailFirebase)
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                         val fname = data.getValue("fname") as CharSequence?
                         val lname = data.getValue("lname") as CharSequence?
                         txtCurrentUser.text = "${welcome} \n ${fname} ${lname}"
-                        btnLogOut.isEnabled = currentUser != null
+                        btnManagerUser.isEnabled = currentUser != null
                     }
                 }
                 .addOnFailureListener { e ->
@@ -90,12 +90,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btnLogOut = findViewById<Button>(R.id.btnLogOut)
-        btnLogOut.setOnClickListener{
-            auth.signOut()
-            val loginActivity = Intent(this, LoginActivity::class.java)
+        val btnManagerUser = findViewById<Button>(R.id.btnManagerUser)
+        btnManagerUser.setOnClickListener{
+            val loginActivity = Intent(this, ManagerUserActivity::class.java)
             startActivity(loginActivity)
-            finish()
         }
 
         val btn7 = findViewById<Button>(R.id.btn7)

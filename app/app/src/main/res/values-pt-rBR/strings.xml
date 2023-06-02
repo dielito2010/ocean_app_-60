@@ -7,7 +7,7 @@
     <string name="first_name">Nome:</string>
     <string name="last_name">Sobrenome:</string>
     <string name="gobacktologin">Voltar para login</string>
-    <string name="logout">Sair</string>
+    <string name="logout">Sair dessa conta</string>
     <string name="health_and_well_being">saúde e bem estar</string>
     <string name="lifestyle_and_behavior">estilo de vida e comportamento</string>
     <string name="concept_of_the_best_age">conceito da melhor idade</string>
@@ -15,4 +15,7 @@
     <string name="notables_of">destaques</string>
     <string name="_5_health_tips_for_people_in_their_60_years">5 dicas de Saúde para pessoas com 60 anos</string>
     <string name="reset_password">RECUPERAR SENHA</string>
+    <string name="user_manager">gerenciar usuário</string>
+    <string name="update_email">Atualizar email</string>
+    <string name="user_delete">Deletar Usuário</string>
 </resources>

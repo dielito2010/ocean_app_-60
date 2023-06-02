@@ -16,4 +16,7 @@
     <string name="notables_of">notables of</string>
     <string name="_5_health_tips_for_people_in_their_60_years">5 Health Tips for People in their 60 years</string>
     <string name="reset_password">Reset Password</string>
+    <string name="user_manager">gerenciar usuário</string>
+    <string name="update_email">Update Email</string>
+    <string name="user_delete">Delete User</string>
 </resources>

@@ -96,16 +96,15 @@
             android:text="estatuto do idoso" />
 
         <Button
-            android:id="@+id/btnLogOut"
+            android:id="@+id/btnManagerUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:backgroundTint="#ff0000"
             android:insetLeft="8dp"
             android:insetRight="8dp"
             android:textSize="30sp"
             android:enabled="false"
-            android:text="@string/logout" />
+            android:text="@string/user_manager" />
 
     </LinearLayout>
 </ScrollView>

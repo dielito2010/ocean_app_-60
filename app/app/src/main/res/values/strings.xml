@@ -216,4 +216,7 @@
     <string name="dance_project_savior">
         <b>PROJETO DE DANÇA SAVIOR\n\</b>Quartas e Sextas - 19 às 20h\nSábado - 8:30 às 9:45h</string>
     <string name="reset_password">RESET PASSWORD</string>
+    <string name="user_manager">gerenciar usuário</string>
+    <string name="update_email">Update Email</string>
+    <string name="user_delete">Delete User</string>
 </resources>
